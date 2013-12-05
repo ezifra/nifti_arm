@@ -1,0 +1,10 @@
+#Rule for adding a /dev/ptu_controller symlink for the ptu
+
+#PTU Fraunhofer IAIS
+BUS=="usb", KERNEL=="ttyUSB?",ATTRS{serial}=="A40089Lc",SYMLINK+="ptu_controller"
+
+#PTU DFKI
+BUS=="usb", KERNEL=="ttyUSB?",ATTRS{serial}=="A8005jQ5",SYMLINK+="ptu_controller"
+
+#PTU 3
+BUS=="usb", KERNEL=="ttyUSB?",ATTRS{serial}=="A4008apR",SYMLINK+="ptu_controller"

@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find nifti_arm)/launch/onlyParams.launch" />
+    <node pkg="nifti_arm" type="main" name="arm_listener" respawn="true">
+    	<!-- May set required="true" -->
+    </node>
+</launch>

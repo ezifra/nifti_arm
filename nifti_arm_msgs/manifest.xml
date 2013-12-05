@@ -1,0 +1,14 @@
+<package>
+  <description brief="NIFTi_arm_msgs">
+
+    NIFTi_arm_msgs containes the messages needed to use the Arm of the NIFTi robot (UGV) platform
+
+  </description>
+  <author>Thorsten Linder</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_msg</url>
+
+</package>
+
+

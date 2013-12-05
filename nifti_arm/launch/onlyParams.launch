@@ -1,0 +1,31 @@
+<launch>
+	<!-- Can-Interface configurations -->
+	<param name="/arm/can/Interface" value="/dev/usb/cpc_usb1" type="str" />
+	<param name="/arm/can/bitrate" value="500" type="int" />
+	<param name="/arm/motor1/node_id" value="20" type="int" />
+	<param name="/arm/motor2/node_id" value="21" type="int" />
+	
+	<!-- define the dimensions -->
+	<param name="/arm/dimensions/length_a" value="500.0" type="double" />
+	<param name="/arm/dimensions/length_b" value="450.0" type="double" />
+	<param name="/arm/dimensions/mounting_height" value="120.0" type="double" />
+	<param name="/arm/dimensions/ptu_height" value="90.0" type="double" />
+	<param name="/arm/dimensions/ptu_height_camera" value="50.0" type="double" />
+	<param name="/arm/dimensions/max_position_error" value="0.13" type="double" />
+	<param name="/arm/dimensions/home_angle_a" value="0.0171" type="double" />
+	<param name="/arm/dimensions/home_angle_b" value="-0.27" type="double" />
+	
+	<!-- set the constants -->
+	<param name="/arm/constants/maximal_velocity" value="0.3" type="double" />
+	<param name="/arm/constants/homing_velocity" value="0.1" type="double" />
+	
+	<!-- set IMU parameters -->
+	<!-- donnot use activate IMU by assining an valid topic name. The current IMU handling is beta -->
+	<!--<param name="/arm/IMU/topic_name" value="/mtig_node/imu/data" type="str" />-->
+	<param name="/arm/IMU/topic_name" value="/arm/imu/data" type="str" />
+	<param name="/arm/IMU/inverted" value="false" type="bool" />
+	<param name="/arm/IMU/axis" value="X" type="str" />
+	
+	<node pkg="tf" type="static_transform_publisher" name="base_arm_link_mapper" args="-0.18 0 0.2077 0 0 0 /base_link /base_arm 30" />
+</launch>
+

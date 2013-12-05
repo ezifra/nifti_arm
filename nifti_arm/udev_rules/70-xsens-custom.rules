@@ -1,0 +1,2 @@
+#Rule for adding a /dev/xsens? symlink for the IMU
+BUS=="usb", KERNEL=="ttyUSB?",ATTRS{manufacturer}=="Xsens",SYMLINK="xsens"

@@ -1,0 +1,14 @@
+<launch>
+	<include file="$(find nifti_arm)/launch/ptu_controller_manager.launch" />
+    <!-- Load controller configuration to parameter server -->
+    <rosparam file="$(find nifti_arm)/config/ptu.yaml" command="load"/>
+    
+    <!-- start specified joint controllers -->
+    <node name="ptu_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=pan_tilt_port
+                --type=simple
+                pan_controller
+                tilt_controller"
+          output="screen"/>
+</launch>
