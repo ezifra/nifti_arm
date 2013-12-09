@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find nifti_arm)/launch/arm.launch" />
+	<include file="$(find nifti_arm_demo_gui)/launch/demo_gui.launch" />
+ </launch>

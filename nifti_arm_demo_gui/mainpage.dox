@@ -1,0 +1,46 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b NIFTi arm demo GUI is a simple GUI to test the NIFTi camera arm.
+
+<table border="">
+  <tr>
+    <th><img src="../../../img/gui_1.png"/></th>
+    <th><img src="../../../img/gui_2.png"/></th>
+  </tr>
+  <tr>
+    <td>GUI Tab 2: Manual control for each motor</td>
+    <td>GUI Tab 1: General Control</td>
+
+  </tr>
+</table>
+
+<h2>GUI Tab 1: General Control</h2>
+You can enter the desired height for the NIFTi arm into (1) or change it by moving (3). You can set an
+angle between the gravity axis and the axis passing the base plate and the camera mounting in (2) and
+confirm it by pressing the button labeled “Set Angle”. You can control the PTU by moving (4) and (5).
+By pressing “Stop” the motor will shut down. You need to reactivate it by pressing the button labeled
+“Reactivate”. By pressing (7) the current IMU angle will be defined as 0 degrees. Pressing (7) will
+restart the homing procedure.
+<h2>GUI Tab 2: Manual control for each motor</h2>
+If you want to move each motor manually you need to enable (1). Then you can move the shoulder
+joint (the one which is mounted on the base plate) by moving (2) and the elbow joint by moving (3).
+
+
+
+\section codeapi Code API
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

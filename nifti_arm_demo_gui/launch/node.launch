@@ -1,0 +1,8 @@
+<launch>
+	<include file="$(find nifti_arm)/launch/arm.launch" />
+	
+    <node pkg="rviz" type="rviz" name="rviz" respawn="false">
+    </node>
+    <node pkg="nifti_arm_demo_gui" type="gui" name="arm_gui" respawn="false">
+    </node>   
+</launch>
