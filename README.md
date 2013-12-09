@@ -1,7 +1,3 @@
-
-Package Summary
-===============
-
 * Authors Daniel Reuter, Josef Boerding, Erik Zimmermann
 * Licence BSD
 
@@ -15,15 +11,15 @@ To support an easy replacement of sensors the PTU has 3 active USB 2.0 port avai
 2. Installation
 ---------------
 
-This software is based on [ROS Fuerte](http://wiki.ros.org/fuerte ROS Fuerte).
+This software is based on [ROS Fuerte](http://wiki.ros.org/fuerte).
 You need also the following packages (partly included here):
-[git]: http://git-scm.com
-[nifti_arm_msgs]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/nifti_arm_msgs)
-[dynamixel_msgs, dynamixel_controllers]: (https://github.com/arebgun/dynamixel_motor) 
-[diagnostic_updater]: (https://github.com/ros/diagnostics/tree/groovy-devel/diagnostic_updater) 
-[libcan]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libcan) 
-[libepos]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libepos)
-[tulibs]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/tulibs)
+* [git]: http://git-scm.com
+* [nifti_arm_msgs]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/nifti_arm_msgs)
+* [dynamixel_msgs, dynamixel_controllers]: (https://github.com/arebgun/dynamixel_motor) 
+* [diagnostic_updater]: (https://github.com/ros/diagnostics/tree/groovy-devel/diagnostic_updater) 
+* [libcan]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libcan) 
+* [libepos]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libepos)
+* [tulibs]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/tulibs)
 
 
 2.1 Sources
