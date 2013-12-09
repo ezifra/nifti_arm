@@ -13,13 +13,13 @@ To support an easy replacement of sensors the PTU has 3 active USB 2.0 port avai
 
 This software is based on [ROS Fuerte](http://wiki.ros.org/fuerte).
 You need also the following packages (partly included here):
-* [git]: http://git-scm.com
+* [git] (http://git-scm.com)
 * [nifti_arm_msgs] (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/nifti_arm_msgs)
-* [dynamixel_msgs, dynamixel_controllers]: (https://github.com/arebgun/dynamixel_motor) 
-* [diagnostic_updater]: (https://github.com/ros/diagnostics/tree/groovy-devel/diagnostic_updater) 
-* [libcan]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libcan) 
-* [libepos]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libepos)
-* [tulibs]: (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/tulibs)
+* [dynamixel_msgs, dynamixel_controllers] (https://github.com/arebgun/dynamixel_motor) 
+* [diagnostic_updater] (https://github.com/ros/diagnostics/tree/groovy-devel/diagnostic_updater) 
+* [libcan] (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libcan) 
+* [libepos] (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/libepos)
+* [tulibs] (https://github.com/NIFTi-Fraunhofer/nifti_arm/tree/master/tulibs)
 
 
 2.1 Sources
@@ -32,20 +32,30 @@ You can get the sources by cloning the repository above:
 The package *nifti_arm* and its dependencies is build with cmake. You can find a tutorial for using cmake [here](http://www.youtube.com/watch?v=CLvZTyji_Uw).
 
 To build the *nifti_arm* sources, make sure to have the *nifti_arm* package and its dependencies in your ROS_PACKAGE_PATH.
-Change into the checked out directory *nifti_arm* and execute the following commands within each subdirectory
+Change into the checked out directory *nifti_arm*. Within each of the subdirectories (*libcan, libcpc, tulibs, libepos, nifti_arm_msgs, nifti_arm, nifti_arm_demo_gui*) execute the following commands:
 
 *cmake .*
+
 *make* 
+
 *sudo make install*
 
-and mind the following order of subdirectories:
 
-*libcan, libcpc, tulibs, libepos, nifti_arm_msgs, nifti_arm, nifti_arm_demo_gui*
 
 3. Usage
 --------
 
-To use the nifti_arm_demo_gui, *roslaunch nifti_arm_demo_gui demo_gui_with_arm.launch* and see documentation at [NIFTi_arm_demo_GUI_instructions.pdf](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm_demo_GUI_instructions.pdf)
+To launch the *nifti_arm_demo_gui* just execute:
+
+*roslaunch nifti_arm_demo_gui demo_gui.launch*
+
+or
+
+*roslaunch nifti_arm_demo_gui demo_gui_with_arm.launch* 
+
+if you have the arm installed.
+
+For further documentation see [NIFTi_arm_demo_GUI_instructions.pdf](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm_demo_GUI_instructions.pdf)
 
 4. Report a bug
 ---------------
