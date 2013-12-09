@@ -26,16 +26,20 @@ You need also the following packages (partly included here):
 -----------
 
 You can get the sources by cloning the repository above:
-git clone https://github.com/NIFTi-Fraunhofer/nifti_arm
-nifti_arm and its dependencies is build with cmake. 
-You can find a tutorial for using cmake [here]: (http://www.youtube.com/watch?v=CLvZTyji_Uw).
+
+*git clone https://github.com/NIFTi-Fraunhofer/nifti_arm*
+
+The package nifti_arm and its dependencies is build with cmake. You can find a tutorial for using cmake [here]: (http://www.youtube.com/watch?v=CLvZTyji_Uw).
 
 To build the nifti_arm sources, make sure to have the nifti_arm package in your ROS_PACKAGE_PATH.
 Change into the checked out directory nifti_arm and do the cmake commandos 
-'cmake .'
-'make' 
-'sudo make install'
+
+*cmake .*
+*make* 
+*sudo make install*
+
 in each subdirectory in the following order:
+
 *libcan, libcpc, tulibs, libepos, nifti_arm_msgs, nifti_arm, nifti_arm_demo_gui*
 
 3. Usage
