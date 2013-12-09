@@ -31,13 +31,11 @@ You can get the sources by cloning the repository above:
 
 The package *nifti_arm* and its dependencies is build with cmake. You can find a tutorial for using cmake [here](http://www.youtube.com/watch?v=CLvZTyji_Uw).
 
-To build the *nifti_arm* sources, make sure to have the *nifti_arm* package and its dependencies in your ROS_PACKAGE_PATH.
+To build the *nifti_arm* sources, make sure you have the *nifti_arm* package and its dependencies set correctly in your ROS_PACKAGE_PATH environment variable.
 Change into the checked out directory *nifti_arm*. Within each of the subdirectories (*libcan, libcpc, tulibs, libepos, nifti_arm_msgs, nifti_arm, nifti_arm_demo_gui*) execute the following commands:
 
-*cmake .*
-
-*make* 
-
+*cmake .*  
+*make*  
 *sudo make install*
 
 
@@ -49,16 +47,12 @@ To launch the *nifti_arm_demo_gui* just execute:
 
 *roslaunch nifti_arm_demo_gui demo_gui.launch*
 
-or
+or if you have the arm installed:
 
 *roslaunch nifti_arm_demo_gui demo_gui_with_arm.launch* 
 
-if you have the arm installed.
-
 For further documentation see [NIFTi_arm_demo_GUI_instructions.pdf](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm_demo_GUI_instructions.pdf)
 
-4. Report a bug
----------------
 
 
 
