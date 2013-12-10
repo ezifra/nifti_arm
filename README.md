@@ -1,5 +1,5 @@
 NIFTi-Arm1: 
-![NIFTi-Arm2](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm.jpg "NIFTi-Arm3")
+![NIFTi-Arm2](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg "NIFTi-Arm3")
 
 
 * Authors: Daniel Reuter, Josef Boerding, Erik Zimmermann
