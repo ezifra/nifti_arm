@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg" alt="NIFTi-Arm" width="50%"/>
+<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg" alt="NIFTi-Arm" width="60%"/>
 
 * Authors: Daniel Reuter, Josef Boerding, Erik Zimmermann
 * Licence: BSD
@@ -9,6 +9,8 @@
 The NIFTi arm is an extension "module" for the NIFTi-UGV, a [BlueBotics Absolem] (http://www.bluebotics.com/mobile-robotics/absolem/ "BlueBotics Absolem").
 The arm has 4 degree of freedom. The two main actuators are lifting upper and lower joint to raise a hight up to ca. 1,20 m in addition to the robot hide. On top of the lower joint is a pan-till-unit (PTU) which can carry additional sensors and swivel those into the direction of choice, e.g. cameras. 
 To support an easy replacement of sensors the PTU has 3 active USB 2.0 port available.
+
+<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="50%" align="center"/>
 
 2. Installation
 ---------------
@@ -46,8 +48,6 @@ If you have the arm installed on your robot you can find in the *launch* directo
 --------
 
 A description of how to install the arm on the robot can be found [here](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/User%20Manual%20for%20the%20NIFTi-Arm%20v0.2.docx)
-
-<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="50%"/>
 
 To launch the *nifti_arm_demo_gui* just execute:  
 *roslaunch nifti_arm_demo_gui demo_gui.launch*
