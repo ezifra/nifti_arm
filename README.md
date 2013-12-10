@@ -1,5 +1,9 @@
-* Authors Daniel Reuter, Josef Boerding, Erik Zimmermann
-* Licence BSD
+NIFTi-Arm1: 
+![NIFTi-Arm2](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm.jpg "NIFTi-Arm3")
+
+
+* Authors: Daniel Reuter, Josef Boerding, Erik Zimmermann
+* Licence: BSD
 
 1. Introduction/Overview
 ------------------------
