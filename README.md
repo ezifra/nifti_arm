@@ -1,6 +1,6 @@
 ![](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg "NIFTi-Arm")
 
-<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg" alt="NIFTi-Arm" style="width:50px;"/>
+<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg" alt="NIFTi-Arm" width="50" style="width:50px;"/>
 
 * Authors: Daniel Reuter, Josef Boerding, Erik Zimmermann
 * Licence: BSD
