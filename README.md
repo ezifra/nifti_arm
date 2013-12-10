@@ -54,5 +54,8 @@ or if you have the arm installed:
 For further documentation see [NIFTi_arm_demo_GUI_instructions.pdf](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm_demo_GUI_instructions.pdf)
 
 
+4. Report a bug
+---------------
+Please use the [issue tracker](https://github.com/NIFTi-Fraunhofer/nifti_arm/issues) of github to report a bug.
 
 
