@@ -10,7 +10,9 @@ The NIFTi arm is an extension "module" for the NIFTi-UGV, a [BlueBotics Absolem]
 The arm has 4 degree of freedom. The two main actuators are lifting upper and lower joint to raise a hight up to ca. 1,20 m in addition to the robot hide. On top of the lower joint is a pan-till-unit (PTU) which can carry additional sensors and swivel those into the direction of choice, e.g. cameras. 
 To support an easy replacement of sensors the PTU has 3 active USB 2.0 port available.
 
-<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="50%" align="center"/>
+<div align="center">
+<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="50%"/>
+</div>
 
 2. Installation
 ---------------
