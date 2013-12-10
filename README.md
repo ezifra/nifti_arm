@@ -1,4 +1,4 @@
-->![](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg "NIFTi-Arm")<-
+![](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg "NIFTi-Arm")
 
 
 * Authors: Daniel Reuter, Josef Boerding, Erik Zimmermann
@@ -48,7 +48,7 @@ If you have the arm installed on your robot you can find in the *launch* directo
 
 A description of how to install the arm on the robot can be found [here](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/User%20Manual%20for%20the%20NIFTi-Arm%20v0.2.docx)
 
-->![](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg "NIFTi-Robot-with-Arm")<-
+![](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg "NIFTi-Robot-with-Arm")
 
 To launch the *nifti_arm_demo_gui* just execute:  
 *roslaunch nifti_arm_demo_gui demo_gui.launch*
