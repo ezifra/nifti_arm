@@ -58,6 +58,8 @@ or if you have the arm installed:
 
 For further documentation see [NIFTi_arm_demo_GUI_instructions.pdf](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/NIFTi_arm_demo_GUI_instructions.pdf)
 
+A description of the tf-tree of the arm can be found [here](https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/Nifti_arm_tf-tree.PDF)
+
 
 4. Report a bug
 ---------------
