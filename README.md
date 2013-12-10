@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg" alt="NIFTi-Arm" width="60%"/>
+<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_arm.jpg" alt="NIFTi-Arm" width="55%"/>
 
 * Authors: Daniel Reuter, Josef Boerding, Erik Zimmermann
 * Licence: BSD
@@ -11,7 +11,7 @@ The arm has 4 degree of freedom. The two main actuators are lifting upper and lo
 To support an easy replacement of sensors the PTU has 3 active USB 2.0 port available.
 
 <div align="center">
-<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="50%"/>
+<img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="45%"/>
 </div>
 
 2. Installation
