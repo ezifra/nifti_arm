@@ -38,13 +38,14 @@ You can get the sources by cloning the repository above:
 The package *nifti_arm* and its dependencies is build with cmake. You can find a tutorial for using cmake [here](http://www.youtube.com/watch?v=CLvZTyji_Uw).
 
 To build the *nifti_arm* sources, make sure you have the *nifti_arm* package directory and its dependencies set correctly in your ROS_PACKAGE_PATH environment variable.
-Change into the checked out directory *nifti_arm*. Within each of the subdirectories (*libcan, libcpc, tulibs, libepos, nifti_arm_msgs, nifti_arm, nifti_arm_demo_gui*) execute the following commands:  
+Change into the checked out directory *nifti_arm*. Within each of the subdirectories (*libcan, libcpc, tulibs, libepos*) execute the following commands:  
 
 *cmake .*  
 *make*  
   
 After that you can build the nifti_arm:  
-*rosmake nifti_arm*  
+*rosmake nifti_arm*    
+*rosmake nifti_arm_demo_gui*  
 
 
 If you have the arm installed on your robot you can find in the *launch* directory different launch files for launching the arm or parts of it. 
