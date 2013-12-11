@@ -42,7 +42,7 @@ Change into the checked out directory *nifti_arm*. Within each of the subdirecto
 
 *cmake .*  
 *make*  
-*sudo make install*
+
 
 If you have the arm installed on your robot you can find in the *launch* directory different launch files for launching the arm or parts of it. 
 
