@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['calculateangles',['calculateAngles',['../classNiftiArmNode.html#aa3804abf2b883d9b3c2deeeeeb058aa5',1,'NiftiArmNode']]],
+  ['calibratecallback',['calibrateCallback',['../classNiftiArmNode.html#add81defffe78b3318b2ee65800bed137',1,'NiftiArmNode']]],
+  ['callbacks_2eh',['callbacks.h',['../callbacks_8h.html',1,'']]],
+  ['can_5fdev',['can_dev',['../classNiftiArmNode.html#a9d3c18e11b54fd0617cf4b9d09f819d0',1,'NiftiArmNode']]],
+  ['canbaudrate',['CanBaudrate',['../classcanSettings__t.html#adb01b3c29accd5bb608ce94dcc9e231a',1,'canSettings_t']]],
+  ['candevicefile',['CanDeviceFile',['../classcanSettings__t.html#a53af5391baf9de2fb0dee6579b34a3a5',1,'canSettings_t']]],
+  ['cansettings',['canSettings',['../classNiftiArmNode.html#a16668b9908670fd82b9bf815f9a458b0',1,'NiftiArmNode']]],
+  ['cansettings_5ft',['canSettings_t',['../classcanSettings__t.html',1,'']]],
+  ['cmakeccompilerid_2ec',['CMakeCCompilerId.c',['../CMakeCCompilerId_8c.html',1,'']]],
+  ['cmakecxxcompilerid_2ecpp',['CMakeCXXCompilerId.cpp',['../CMakeCXXCompilerId_8cpp.html',1,'']]],
+  ['compiler_5fid',['COMPILER_ID',['../CMakeCCompilerId_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['curr1',['curr1',['../classNiftiArmNode.html#ac43de745fe01c01a6504b81324c00e39',1,'NiftiArmNode']]],
+  ['curr2',['curr2',['../classNiftiArmNode.html#a32e3a070cd88f5d1e76c07e5d283da79',1,'NiftiArmNode']]],
+  ['current_5felbow',['current_elbow',['../classnifti__arm__status.html#a6dcb5d13ea3776915bb39829d0aca263',1,'nifti_arm_status']]],
+  ['current_5fshoulder',['current_shoulder',['../classnifti__arm__status.html#a7a62c637873ccd934b46759120175a0f',1,'nifti_arm_status']]],
+  ['currentcontrol',['currentControl',['../classNiftiArmNode.html#a900de581a9d659d09e2844f83e896be1',1,'NiftiArmNode']]]
+];

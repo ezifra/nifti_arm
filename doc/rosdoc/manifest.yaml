@@ -1,0 +1,18 @@
+authors: Daniel Reuter
+brief: nifti_arm
+depends:
+- roscpp
+- dynamixel_controllers
+- diagnostic_updater
+- std_msgs
+- sensor_msgs
+- nifti_arm_msgs
+- rospy
+- tf
+- dynamixel_msgs
+description: "\n\n     nifti_arm\n\n  "
+license: BSD
+msgs: []
+package_type: package
+srvs: []
+url: https://github.com/NIFTi-Fraunhofer/nifti_arm

@@ -1,0 +1,317 @@
+\section{motorcontroller.\-h \-File \-Reference}
+\label{motorcontroller_8h}\index{motorcontroller.\-h@{motorcontroller.\-h}}
+{\ttfamily \#include \char`\"{}\-Nifti\-Arm\-Node.\-h\char`\"{}}\*
+\-Include dependency graph for motorcontroller.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{motorcontroller_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{motorcontroller_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D}~4096
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D}~1024
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D}~0x6040
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E}~0x6078
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}~0x6061
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T}~0x607\-C
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N}~0x609\-A
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D}~0x6098
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}~35
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T}~5
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T}~6
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T}~21
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T}~22
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}~1
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}~2
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S}~0x6099
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}~2
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H}~1
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G}~6
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}~0x6060
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E}~0x20\-A1
+\item 
+\#define {\bf \-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D}~0x6041
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf elmo\-\_\-get\-\_\-current} (epos\-\_\-device\-\_\-p dev)
+\item 
+float {\bf elmo\-\_\-get\-\_\-position\-\_\-error} (epos\-\_\-node\-\_\-p node)
+\item 
+void {\bf elmo\-\_\-start\-\_\-homing} (epos\-\_\-node\-\_\-p node, float speed, unsigned int acceleration, int datum, unsigned char method)
+\item 
+void {\bf elmo\-\_\-wait\-\_\-homed} (epos\-\_\-device\-\_\-p dev, ros\-::\-Rate $\ast$rate, {\bf \-Nifti\-Arm\-Node} $\ast$arm)
+\item 
+void {\bf elmo\-\_\-wait\-\_\-target\-\_\-reached} (epos\-\_\-device\-\_\-p dev, ros\-::\-Rate $\ast$rate, {\bf \-Nifti\-Arm\-Node} $\ast$arm)
+\item 
+int {\bf initialize\-Motor\-Controller\-Device} (epos\-\_\-node\-\_\-p mc, int id, can\-\_\-device\-\_\-t $\ast$can\-\_\-dev)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D@{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D}}
+\index{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D@{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-T\-T\-A\-I\-N\-E\-D}~4096}\label{motorcontroller_8h_a00675fa6b94ad39ab794d1163fdb398d}
+
+
+\-Definition at line 22 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D@{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D}}
+\index{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D@{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-B\-I\-T\-M\-A\-S\-K\-\_\-\-T\-A\-R\-G\-E\-T\-\_\-\-R\-E\-A\-C\-H\-E\-D}~1024}\label{motorcontroller_8h_add31d38cbe6206455a991f4ce162cc65}
+
+
+\-Definition at line 32 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D@{\-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D}}
+\index{\-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D@{\-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-C\-O\-N\-T\-R\-O\-L\-W\-O\-R\-D}~0x6040}\label{motorcontroller_8h_ac6b426401b8b027d8902efd950aae7db}
+
+
+\-Definition at line 13 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E@{\-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E}}
+\index{\-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E@{\-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-I\-N\-D\-E\-X\-\_\-\-A\-C\-T\-U\-A\-L\-\_\-\-V\-A\-L\-U\-E}~0x6078}\label{motorcontroller_8h_a3ad4e67a9d2ae712c6baa3ff3ce8f917}
+
+
+\-Definition at line 11 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}}
+\index{\-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}~0x6061}\label{motorcontroller_8h_adaa4785b13a04167c9de72701ab11624}
+
+
+\-Definition at line 16 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-E\-\_\-\-O\-F\-F\-S\-E\-T}~0x607\-C}\label{motorcontroller_8h_a5151050c833b32dde4c2baa6412611a9}
+
+
+\-Definition at line 15 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N}~0x609\-A}\label{motorcontroller_8h_a36100ba8a0ea9b6e000d3da1a94b341d}
+
+
+\-Definition at line 21 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D}~0x6098}\label{motorcontroller_8h_a278d1e8764bd820539bbcec9c6dd822d}
+
+
+\-Definition at line 17 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N}~35}\label{motorcontroller_8h_a13e574a1bfe0aee4bd9635ba33ddf1df}
+
+
+\-Definition at line 27 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-E\-F\-T}~5}\label{motorcontroller_8h_a47fecfd2cb7bf9cdf61dfb00d9c3d55d}
+
+
+\-Definition at line 28 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-I\-N\-D\-E\-X\-\_\-\-R\-I\-G\-H\-T}~6}\label{motorcontroller_8h_a9fa569d374e440b752b3239d95f48064}
+
+
+\-Definition at line 29 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-L\-E\-F\-T}~21}\label{motorcontroller_8h_abbd41ef3257f4a748db4de4332e9e7f2}
+
+
+\-Definition at line 30 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-\_\-\-H\-O\-M\-E\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-R\-I\-G\-H\-T}~22}\label{motorcontroller_8h_a133be4fa087c753bae71573f3a859d5a}
+
+
+\-Definition at line 31 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}~1}\label{motorcontroller_8h_a21eaf9e5902e300845531117532e24fb}
+
+
+\-Definition at line 26 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E\-\_\-\-L\-I\-M\-I\-T\-\_\-\-S\-W\-I\-T\-C\-H\-\_\-\-A\-N\-D\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}~2}\label{motorcontroller_8h_a1f02db89e40d2d36e0f9481bdcd780e7}
+
+
+\-Definition at line 25 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S}~0x6099}\label{motorcontroller_8h_a66ae1179a1aece9180d57dbfe501e3f0}
+
+
+\-Definition at line 18 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-I\-N\-D\-E\-X\-\_\-\-P\-U\-L\-S\-E}~2}\label{motorcontroller_8h_aff83c277f830a2fbffb66902ac9e144a}
+
+
+\-Definition at line 20 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H}}
+\index{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H@{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-H\-O\-M\-I\-N\-G\-\_\-\-S\-P\-E\-E\-D\-S\-\_\-\-S\-W\-I\-T\-C\-H}~1}\label{motorcontroller_8h_a884b237126e2a81bccc259c881645ad5}
+
+
+\-Definition at line 19 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G@{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G}}
+\index{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G@{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-H\-O\-M\-I\-N\-G}~6}\label{motorcontroller_8h_a8689526014a2061467f534bee0d09a54}
+
+
+\-Definition at line 24 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}}
+\index{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N@{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-M\-O\-D\-E\-\_\-\-O\-F\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}~0x6060}\label{motorcontroller_8h_a3de43a89d6bdd93c5d6e405e5982a98c}
+
+
+\-Definition at line 23 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E@{\-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E}}
+\index{\-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E@{\-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-D\-E\-X\-\_\-\-V\-A\-L\-U\-E}~0x20\-A1}\label{motorcontroller_8h_a2a8e9f3c44fe066b2af7701ccc9dd673}
+
+
+\-Definition at line 12 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!\-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D@{\-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D}}
+\index{\-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D@{\-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{\-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-L\-M\-O\-\_\-\-S\-T\-A\-T\-U\-S\-W\-O\-R\-D}~0x6041}\label{motorcontroller_8h_ae6c28c1d65a74fae72f88b282969d51b}
+
+
+\-Definition at line 14 of file motorcontroller.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{motorcontroller.\-h@{motorcontroller.\-h}!elmo\-\_\-get\-\_\-current@{elmo\-\_\-get\-\_\-current}}
+\index{elmo\-\_\-get\-\_\-current@{elmo\-\_\-get\-\_\-current}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{elmo\-\_\-get\-\_\-current}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf elmo\-\_\-get\-\_\-current} (
+\begin{DoxyParamCaption}
+\item[{epos\-\_\-device\-\_\-p}]{dev}
+\end{DoxyParamCaption}
+)}\label{motorcontroller_8h_a126d0850c02bd1591b96054f5fa56366}
+
+
+\-Definition at line 81 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!elmo\-\_\-get\-\_\-position\-\_\-error@{elmo\-\_\-get\-\_\-position\-\_\-error}}
+\index{elmo\-\_\-get\-\_\-position\-\_\-error@{elmo\-\_\-get\-\_\-position\-\_\-error}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{elmo\-\_\-get\-\_\-position\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf elmo\-\_\-get\-\_\-position\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{epos\-\_\-node\-\_\-p}]{node}
+\end{DoxyParamCaption}
+)}\label{motorcontroller_8h_a3be740fe8815a0e980c2067ed3c35a4f}
+
+
+\-Definition at line 88 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!elmo\-\_\-start\-\_\-homing@{elmo\-\_\-start\-\_\-homing}}
+\index{elmo\-\_\-start\-\_\-homing@{elmo\-\_\-start\-\_\-homing}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{elmo\-\_\-start\-\_\-homing}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf elmo\-\_\-start\-\_\-homing} (
+\begin{DoxyParamCaption}
+\item[{epos\-\_\-node\-\_\-p}]{node, }
+\item[{float}]{speed, }
+\item[{unsigned int}]{acceleration, }
+\item[{int}]{datum, }
+\item[{unsigned char}]{method}
+\end{DoxyParamCaption}
+)}\label{motorcontroller_8h_abbaa2c6febdfa5aa2973c58f12ff47e8}
+
+
+\-Definition at line 95 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!elmo\-\_\-wait\-\_\-homed@{elmo\-\_\-wait\-\_\-homed}}
+\index{elmo\-\_\-wait\-\_\-homed@{elmo\-\_\-wait\-\_\-homed}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{elmo\-\_\-wait\-\_\-homed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf elmo\-\_\-wait\-\_\-homed} (
+\begin{DoxyParamCaption}
+\item[{epos\-\_\-device\-\_\-p}]{dev, }
+\item[{ros\-::\-Rate $\ast$}]{rate, }
+\item[{{\bf \-Nifti\-Arm\-Node} $\ast$}]{arm}
+\end{DoxyParamCaption}
+)}\label{motorcontroller_8h_a24986bb9b36a5e77f4d535271952d6d6}
+
+
+\-Definition at line 115 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!elmo\-\_\-wait\-\_\-target\-\_\-reached@{elmo\-\_\-wait\-\_\-target\-\_\-reached}}
+\index{elmo\-\_\-wait\-\_\-target\-\_\-reached@{elmo\-\_\-wait\-\_\-target\-\_\-reached}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{elmo\-\_\-wait\-\_\-target\-\_\-reached}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf elmo\-\_\-wait\-\_\-target\-\_\-reached} (
+\begin{DoxyParamCaption}
+\item[{epos\-\_\-device\-\_\-p}]{dev, }
+\item[{ros\-::\-Rate $\ast$}]{rate, }
+\item[{{\bf \-Nifti\-Arm\-Node} $\ast$}]{arm}
+\end{DoxyParamCaption}
+)}\label{motorcontroller_8h_aec0a9ef6b298d25bedad0e0f40a4734b}
+
+
+\-Definition at line 125 of file motorcontroller.\-h.
+
+\index{motorcontroller.\-h@{motorcontroller.\-h}!initialize\-Motor\-Controller\-Device@{initialize\-Motor\-Controller\-Device}}
+\index{initialize\-Motor\-Controller\-Device@{initialize\-Motor\-Controller\-Device}!motorcontroller.h@{motorcontroller.\-h}}
+\subsubsection[{initialize\-Motor\-Controller\-Device}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf initialize\-Motor\-Controller\-Device} (
+\begin{DoxyParamCaption}
+\item[{epos\-\_\-node\-\_\-p}]{mc, }
+\item[{int}]{id, }
+\item[{can\-\_\-device\-\_\-t $\ast$}]{can\-\_\-dev}
+\end{DoxyParamCaption}
+)}\label{motorcontroller_8h_a47861716208c13479bd103c565751825}
+
+
+\-Definition at line 45 of file motorcontroller.\-h.
+

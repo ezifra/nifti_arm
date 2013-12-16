@@ -1,0 +1,670 @@
+\section{\-Nifti\-Arm\-Node \-Class \-Reference}
+\label{classNiftiArmNode}\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}}
+
+
+{\ttfamily \#include $<$\-Nifti\-Arm\-Node.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf activate\-Callback} (const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&msg)
+\item 
+int {\bf adopt\-Position} (void)
+\item 
+void {\bf angle\-Callback} (const nifti\-\_\-arm\-\_\-msgs\-::msg\-\_\-angle\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf calculate\-Angles} (double \&alpha, double \&beta)
+\item 
+void {\bf calibrate\-Callback} (const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf current\-Control} (void)
+\item 
+void {\bf float\-Motors} (void)
+\item 
+void {\bf get\-Ros\-Parameters} (void)
+\item 
+void {\bf halt\-Motors} (void)
+\item 
+void {\bf home} (void)
+\item 
+void {\bf home\-Callback} (const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf \-I\-M\-U\-Callback} (const sensor\-\_\-msgs\-::\-Imu\-::\-Const\-Ptr \&msg)
+\item 
+int {\bf initialize} ()
+\item 
+void {\bf manual\-Activate\-Callback} (const std\-\_\-msgs\-::\-Bool\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf manual\-Position\-Callback} (const nifti\-\_\-arm\-\_\-msgs\-::msg\-\_\-position\-::\-Const\-Ptr \&msg)
+\item 
+{\bf \-Nifti\-Arm\-Node} ()
+\item 
+void {\bf only\-Height\-Callback} (const nifti\-\_\-arm\-\_\-msgs\-::msg\-\_\-height\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf \-Pan\-Callback} (const dynamixel\-\_\-msgs\-::\-Joint\-State\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf position\-\_\-error\-\_\-\-Control} (void)
+\item 
+void {\bf publish\-Status} ()
+\item 
+void {\bf reactivate\-Motors} (void)
+\item 
+void {\bf set\-Nodehandle} (ros\-::\-Node\-Handle $\ast$nh)
+\item 
+void {\bf set\-Updater} (diagnostic\-\_\-updater\-::\-Updater $\ast$up)
+\item 
+void {\bf shutdown} (void)
+\item 
+void {\bf stop\-Callback} (const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf \-Tilt\-Callback} (const dynamixel\-\_\-msgs\-::\-Joint\-State\-::\-Const\-Ptr \&msg)
+\item 
+virtual {\bf $\sim$\-Nifti\-Arm\-Node} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf nifti\-\_\-arm\-\_\-status} $\ast$ {\bf n\-\_\-status}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+can\-\_\-device\-\_\-t {\bf can\-\_\-dev}
+\item 
+{\bf can\-Settings\-\_\-t} {\bf can\-Settings}
+\item 
+float {\bf curr1}
+\item 
+float {\bf curr2}
+\item 
+{\bf dimensions\-\_\-t} {\bf dimensions}
+\item 
+int {\bf height}
+\item 
+bool {\bf homing}
+\item 
+double {\bf \-I\-M\-U\-\_\-angle}
+\item 
+bool {\bf manual}
+\item 
+epos\-\_\-node\-\_\-t {\bf \-M\-C\-\_\-1}
+\item 
+epos\-\_\-node\-\_\-t {\bf \-M\-C\-\_\-2}
+\item 
+ros\-::\-Node\-Handle $\ast$ {\bf n}
+\item 
+double {\bf nominal\-\_\-angle}
+\item 
+bool {\bf operating}
+\item 
+double {\bf pan\-\_\-angle}
+\item 
+ros\-::\-Publisher {\bf pub\-Current}
+\item 
+ros\-::\-Publisher {\bf pub\-Position}
+\item 
+ros\-::\-Subscriber {\bf sub\-Activate}
+\item 
+ros\-::\-Subscriber {\bf sub\-Angle}
+\item 
+ros\-::\-Subscriber {\bf sub\-Calibrate}
+\item 
+ros\-::\-Subscriber {\bf sub\-Home}
+\item 
+ros\-::\-Subscriber {\bf sub\-I\-M\-U}
+\item 
+ros\-::\-Subscriber {\bf sub\-Manual\-Activate}
+\item 
+ros\-::\-Subscriber {\bf sub\-Manual\-Position}
+\item 
+ros\-::\-Subscriber {\bf sub\-Only\-Height}
+\item 
+ros\-::\-Subscriber {\bf sub\-Pan}
+\item 
+ros\-::\-Subscriber {\bf sub\-Stop}
+\item 
+ros\-::\-Subscriber {\bf sub\-Tilt}
+\item 
+tf\-::\-Transform\-Broadcaster $\ast$ {\bf tf\-\_\-br}
+\item 
+double {\bf tilt\-\_\-angle}
+\item 
+diagnostic\-\_\-updater\-::\-Updater $\ast$ {\bf updater}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 11 of file \-Nifti\-Arm\-Node.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}}
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-Nifti\-Arm\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Nifti\-Arm\-Node\-::\-Nifti\-Arm\-Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_af7053c02aafa62cea698b0e2060dbeb9}
+
+
+\-Definition at line 10 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!$\sim$\-Nifti\-Arm\-Node@{$\sim$\-Nifti\-Arm\-Node}}
+\index{$\sim$\-Nifti\-Arm\-Node@{$\sim$\-Nifti\-Arm\-Node}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{$\sim$\-Nifti\-Arm\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Nifti\-Arm\-Node\-::$\sim$\-Nifti\-Arm\-Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classNiftiArmNode_a03335c232bd168e8c041b794229cbd35}
+
+
+\-Definition at line 20 of file \-Nifti\-Arm\-Node.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!activate\-Callback@{activate\-Callback}}
+\index{activate\-Callback@{activate\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{activate\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::activate\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a696a3e2bd095f2669edcdb5e4ca84e2b}
+
+
+\-Definition at line 46 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!adopt\-Position@{adopt\-Position}}
+\index{adopt\-Position@{adopt\-Position}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{adopt\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Nifti\-Arm\-Node\-::adopt\-Position} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a2fb116c0d0f703c5f1e712ba9fc2e013}
+
+
+\-Definition at line 76 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!angle\-Callback@{angle\-Callback}}
+\index{angle\-Callback@{angle\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{angle\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::angle\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const nifti\-\_\-arm\-\_\-msgs\-::msg\-\_\-angle\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_afbdd2f7aea9012e97a3f635fa6a9f14c}
+
+
+\-Definition at line 41 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!calculate\-Angles@{calculate\-Angles}}
+\index{calculate\-Angles@{calculate\-Angles}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{calculate\-Angles}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::calculate\-Angles} (
+\begin{DoxyParamCaption}
+\item[{double \&}]{alpha, }
+\item[{double \&}]{beta}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_aa3804abf2b883d9b3c2deeeeeb058aa5}
+
+
+\-Definition at line 307 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!calibrate\-Callback@{calibrate\-Callback}}
+\index{calibrate\-Callback@{calibrate\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{calibrate\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::calibrate\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_add81defffe78b3318b2ee65800bed137}
+
+
+\-Definition at line 128 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!current\-Control@{current\-Control}}
+\index{current\-Control@{current\-Control}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{current\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::current\-Control} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a900de581a9d659d09e2844f83e896be1}
+
+
+\-Definition at line 164 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!float\-Motors@{float\-Motors}}
+\index{float\-Motors@{float\-Motors}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{float\-Motors}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::float\-Motors} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a5f06c7cb6754a637e78d37a0f34b62e8}
+
+
+\-Definition at line 209 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!get\-Ros\-Parameters@{get\-Ros\-Parameters}}
+\index{get\-Ros\-Parameters@{get\-Ros\-Parameters}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{get\-Ros\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::get\-Ros\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_aa6393558af60eb1235ed933ec1a91cfe}
+
+
+\-Definition at line 366 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!halt\-Motors@{halt\-Motors}}
+\index{halt\-Motors@{halt\-Motors}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{halt\-Motors}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::halt\-Motors} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_af1c847b691293a255e73471a493b0aaa}
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!home@{home}}
+\index{home@{home}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{home}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::home} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a13a5e6189834081cf45234f084746aa2}
+
+
+\-Definition at line 271 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!home\-Callback@{home\-Callback}}
+\index{home\-Callback@{home\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{home\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::home\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a297b124c256756aca937b1966b5b438d}
+
+
+\-Definition at line 51 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-I\-M\-U\-Callback@{\-I\-M\-U\-Callback}}
+\index{\-I\-M\-U\-Callback@{\-I\-M\-U\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-I\-M\-U\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::\-I\-M\-U\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const sensor\-\_\-msgs\-::\-Imu\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_af49da8b733de4afe5d6d8804b7ab71b4}
+
+
+\-Definition at line 84 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!initialize@{initialize}}
+\index{initialize@{initialize}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Nifti\-Arm\-Node\-::initialize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_aacebbf3044c59f72e0b35853dd9e1060}
+
+
+\-Definition at line 214 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!manual\-Activate\-Callback@{manual\-Activate\-Callback}}
+\index{manual\-Activate\-Callback@{manual\-Activate\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{manual\-Activate\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::manual\-Activate\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-Bool\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a37ca7db8a89bd98c1130c0aa871c161a}
+
+
+\-Definition at line 61 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!manual\-Position\-Callback@{manual\-Position\-Callback}}
+\index{manual\-Position\-Callback@{manual\-Position\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{manual\-Position\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::manual\-Position\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const nifti\-\_\-arm\-\_\-msgs\-::msg\-\_\-position\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a5fde6aaf375622648d1c55861383761a}
+
+
+\-Definition at line 64 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!only\-Height\-Callback@{only\-Height\-Callback}}
+\index{only\-Height\-Callback@{only\-Height\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{only\-Height\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::only\-Height\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const nifti\-\_\-arm\-\_\-msgs\-::msg\-\_\-height\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_ab3b1960deaa7ec1a6974bfc1bcca61dd}
+
+
+\-Definition at line 12 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-Pan\-Callback@{\-Pan\-Callback}}
+\index{\-Pan\-Callback@{\-Pan\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-Pan\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::\-Pan\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const dynamixel\-\_\-msgs\-::\-Joint\-State\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_af08edde07499eaaedf7afe3590de8ae3}
+
+
+\-Definition at line 18 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!position\-\_\-error\-\_\-\-Control@{position\-\_\-error\-\_\-\-Control}}
+\index{position\-\_\-error\-\_\-\-Control@{position\-\_\-error\-\_\-\-Control}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{position\-\_\-error\-\_\-\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::position\-\_\-error\-\_\-\-Control} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a76d3c57dfe67b348ba00cd0b4b95bff5}
+
+
+\-Definition at line 173 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!publish\-Status@{publish\-Status}}
+\index{publish\-Status@{publish\-Status}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{publish\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::publish\-Status} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a07606de3a7f1a0bfee6a137b793be277}
+
+
+\-Definition at line 24 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!reactivate\-Motors@{reactivate\-Motors}}
+\index{reactivate\-Motors@{reactivate\-Motors}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{reactivate\-Motors}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::reactivate\-Motors} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a34d249b247b224dbad5b2bd65857f069}
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!set\-Nodehandle@{set\-Nodehandle}}
+\index{set\-Nodehandle@{set\-Nodehandle}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{set\-Nodehandle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::set\-Nodehandle} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle $\ast$}]{nh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classNiftiArmNode_a3da01acd6724b91041294fa3e711c92e}
+
+
+\-Definition at line 28 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!set\-Updater@{set\-Updater}}
+\index{set\-Updater@{set\-Updater}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{set\-Updater}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::set\-Updater} (
+\begin{DoxyParamCaption}
+\item[{diagnostic\-\_\-updater\-::\-Updater $\ast$}]{up}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classNiftiArmNode_aa99ee11903730e53fb0dd2977b84fcc3}
+
+
+\-Definition at line 32 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::shutdown} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_aab8f77a751d47845ca827f8e91b696ec}
+
+
+\-Definition at line 345 of file \-Nifti\-Arm\-Node.\-cpp.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!stop\-Callback@{stop\-Callback}}
+\index{stop\-Callback@{stop\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{stop\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::stop\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-Empty\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_a46419c36e9da23e92daf44643a2a7c7a}
+
+
+\-Definition at line 55 of file callbacks.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-Tilt\-Callback@{\-Tilt\-Callback}}
+\index{\-Tilt\-Callback@{\-Tilt\-Callback}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-Tilt\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Nifti\-Arm\-Node\-::\-Tilt\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const dynamixel\-\_\-msgs\-::\-Joint\-State\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classNiftiArmNode_adf80bc9d9433a89b0ca5c572f8943f2c}
+
+
+\-Definition at line 30 of file callbacks.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!can\-\_\-dev@{can\-\_\-dev}}
+\index{can\-\_\-dev@{can\-\_\-dev}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{can\-\_\-dev}]{\setlength{\rightskip}{0pt plus 5cm}can\-\_\-device\-\_\-t {\bf \-Nifti\-Arm\-Node\-::can\-\_\-dev}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a9d3c18e11b54fd0617cf4b9d09f819d0}
+
+
+\-Definition at line 51 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!can\-Settings@{can\-Settings}}
+\index{can\-Settings@{can\-Settings}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{can\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf can\-Settings\-\_\-t} {\bf \-Nifti\-Arm\-Node\-::can\-Settings}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a16668b9908670fd82b9bf815f9a458b0}
+
+
+\-Definition at line 61 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!curr1@{curr1}}
+\index{curr1@{curr1}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{curr1}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Nifti\-Arm\-Node\-::curr1}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_ac43de745fe01c01a6504b81324c00e39}
+
+
+\-Definition at line 66 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!curr2@{curr2}}
+\index{curr2@{curr2}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{curr2}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Nifti\-Arm\-Node\-::curr2}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a32e3a070cd88f5d1e76c07e5d283da79}
+
+
+\-Definition at line 67 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{dimensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dimensions\-\_\-t} {\bf \-Nifti\-Arm\-Node\-::dimensions}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a2cac6d3d0c48a24570949850b1ff9cf4}
+
+
+\-Definition at line 60 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!height@{height}}
+\index{height@{height}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Nifti\-Arm\-Node\-::height}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a670ea3ba658dab826f630ecebf3c2612}
+
+
+\-Definition at line 52 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!homing@{homing}}
+\index{homing@{homing}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{homing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Nifti\-Arm\-Node\-::homing}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_aae26fbe10dbc91e151532c7540d47c0f}
+
+
+\-Definition at line 59 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-I\-M\-U\-\_\-angle@{\-I\-M\-U\-\_\-angle}}
+\index{\-I\-M\-U\-\_\-angle@{\-I\-M\-U\-\_\-angle}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-I\-M\-U\-\_\-angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Nifti\-Arm\-Node\-::\-I\-M\-U\-\_\-angle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a2894489f2368b9a67dd6679de8424ba9}
+
+
+\-Definition at line 53 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!manual@{manual}}
+\index{manual@{manual}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{manual}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Nifti\-Arm\-Node\-::manual}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a7864ef069c845c992986ef4dccf0254a}
+
+
+\-Definition at line 58 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-M\-C\-\_\-1@{\-M\-C\-\_\-1}}
+\index{\-M\-C\-\_\-1@{\-M\-C\-\_\-1}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-M\-C\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}epos\-\_\-node\-\_\-t {\bf \-Nifti\-Arm\-Node\-::\-M\-C\-\_\-1}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a9ba70074988b34860cc84e8bde8d408c}
+
+
+\-Definition at line 50 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!\-M\-C\-\_\-2@{\-M\-C\-\_\-2}}
+\index{\-M\-C\-\_\-2@{\-M\-C\-\_\-2}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{\-M\-C\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}epos\-\_\-node\-\_\-t {\bf \-Nifti\-Arm\-Node\-::\-M\-C\-\_\-2}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_aa141c06d7fe0bf61864a837d2494ae6b}
+
+
+\-Definition at line 50 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!n@{n}}
+\index{n@{n}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle$\ast$ {\bf \-Nifti\-Arm\-Node\-::n}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a21f4bef621626f016040aeafd2cc707a}
+
+
+\-Definition at line 62 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!n\-\_\-status@{n\-\_\-status}}
+\index{n\-\_\-status@{n\-\_\-status}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{n\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nifti\-\_\-arm\-\_\-status}$\ast$ {\bf \-Nifti\-Arm\-Node\-::n\-\_\-status}}\label{classNiftiArmNode_a9b84e619e428603526d39f3728948f55}
+
+
+\-Definition at line 47 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!nominal\-\_\-angle@{nominal\-\_\-angle}}
+\index{nominal\-\_\-angle@{nominal\-\_\-angle}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{nominal\-\_\-angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Nifti\-Arm\-Node\-::nominal\-\_\-angle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_ae4948957af57f37d8f7312ec3c501cde}
+
+
+\-Definition at line 54 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!operating@{operating}}
+\index{operating@{operating}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{operating}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Nifti\-Arm\-Node\-::operating}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_aa551d6b85d0ea9e040c2ff008b97b152}
+
+
+\-Definition at line 57 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!pan\-\_\-angle@{pan\-\_\-angle}}
+\index{pan\-\_\-angle@{pan\-\_\-angle}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{pan\-\_\-angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Nifti\-Arm\-Node\-::pan\-\_\-angle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a3e4a0dab413a1c12f10c13d9d1a01145}
+
+
+\-Definition at line 55 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!pub\-Current@{pub\-Current}}
+\index{pub\-Current@{pub\-Current}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{pub\-Current}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf \-Nifti\-Arm\-Node\-::pub\-Current}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a0d83b122e25357d7c65ca95969a5d739}
+
+
+\-Definition at line 64 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!pub\-Position@{pub\-Position}}
+\index{pub\-Position@{pub\-Position}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{pub\-Position}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf \-Nifti\-Arm\-Node\-::pub\-Position}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a2de40b2d5537a2eaf6f96895259a525d}
+
+
+\-Definition at line 65 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Activate@{sub\-Activate}}
+\index{sub\-Activate@{sub\-Activate}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Activate}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Activate}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a99da6274e9d261529bdaf674174c3b71}
+
+
+\-Definition at line 71 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Angle@{sub\-Angle}}
+\index{sub\-Angle@{sub\-Angle}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Angle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a2330e9fe2d5ce4815cad45160ebc0834}
+
+
+\-Definition at line 70 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Calibrate@{sub\-Calibrate}}
+\index{sub\-Calibrate@{sub\-Calibrate}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Calibrate}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Calibrate}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a4243d0f73fc8334e97d090b7e4141d50}
+
+
+\-Definition at line 73 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Home@{sub\-Home}}
+\index{sub\-Home@{sub\-Home}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Home}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Home}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a7919017bb05eb14e5332ddad5b62c39f}
+
+
+\-Definition at line 72 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-I\-M\-U@{sub\-I\-M\-U}}
+\index{sub\-I\-M\-U@{sub\-I\-M\-U}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-I\-M\-U}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-I\-M\-U}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a68eec87529249363393467cfd03c4a52}
+
+
+\-Definition at line 74 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Manual\-Activate@{sub\-Manual\-Activate}}
+\index{sub\-Manual\-Activate@{sub\-Manual\-Activate}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Manual\-Activate}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Manual\-Activate}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_adbcba844700c5a0e9e615b8673e82ca7}
+
+
+\-Definition at line 78 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Manual\-Position@{sub\-Manual\-Position}}
+\index{sub\-Manual\-Position@{sub\-Manual\-Position}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Manual\-Position}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Manual\-Position}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a655cca7be0da353dfd18adae120f1279}
+
+
+\-Definition at line 79 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Only\-Height@{sub\-Only\-Height}}
+\index{sub\-Only\-Height@{sub\-Only\-Height}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Only\-Height}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Only\-Height}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_ab535e2794424dd2131e5572cabbfc138}
+
+
+\-Definition at line 69 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Pan@{sub\-Pan}}
+\index{sub\-Pan@{sub\-Pan}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Pan}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Pan}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a2e5e38c6210288e21c0e61eab971a0a2}
+
+
+\-Definition at line 76 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Stop@{sub\-Stop}}
+\index{sub\-Stop@{sub\-Stop}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Stop}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a63afc09b83ecabb18408cfaa3dd52ffc}
+
+
+\-Definition at line 75 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!sub\-Tilt@{sub\-Tilt}}
+\index{sub\-Tilt@{sub\-Tilt}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{sub\-Tilt}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Nifti\-Arm\-Node\-::sub\-Tilt}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_afdf4b1afeda5242eed448cbc6baadfd5}
+
+
+\-Definition at line 77 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!tf\-\_\-br@{tf\-\_\-br}}
+\index{tf\-\_\-br@{tf\-\_\-br}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{tf\-\_\-br}]{\setlength{\rightskip}{0pt plus 5cm}tf\-::\-Transform\-Broadcaster$\ast$ {\bf \-Nifti\-Arm\-Node\-::tf\-\_\-br}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a9de7b8377a8d1f34b22dae8fc2ff34f9}
+
+
+\-Definition at line 63 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!tilt\-\_\-angle@{tilt\-\_\-angle}}
+\index{tilt\-\_\-angle@{tilt\-\_\-angle}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{tilt\-\_\-angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Nifti\-Arm\-Node\-::tilt\-\_\-angle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a3033f5487d577280345b9e32b36c26fb}
+
+
+\-Definition at line 56 of file \-Nifti\-Arm\-Node.\-h.
+
+\index{\-Nifti\-Arm\-Node@{\-Nifti\-Arm\-Node}!updater@{updater}}
+\index{updater@{updater}!NiftiArmNode@{\-Nifti\-Arm\-Node}}
+\subsubsection[{updater}]{\setlength{\rightskip}{0pt plus 5cm}diagnostic\-\_\-updater\-::\-Updater$\ast$ {\bf \-Nifti\-Arm\-Node\-::updater}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNiftiArmNode_a34cabd88ad8ae993998efaa6014614b6}
+
+
+\-Definition at line 68 of file \-Nifti\-Arm\-Node.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Nifti\-Arm\-Node.\-h}\item 
+{\bf callbacks.\-h}\item 
+{\bf \-Nifti\-Arm\-Node.\-cpp}\end{DoxyCompactItemize}

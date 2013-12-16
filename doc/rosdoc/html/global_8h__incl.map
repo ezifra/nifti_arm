@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node11" href="$nifti__arm__status_8h.html" title="nifti_arm_status.h" alt="" coords="685,83,811,112"/>
+<area shape="rect" id="node35" href="$dimensions__t_8h.html" title="dimensions_t.h" alt="" coords="2533,83,2643,112"/>
+<area shape="rect" id="node45" href="$tools_8h.html" title="tools.h" alt="" coords="3339,83,3400,112"/>
+<area shape="rect" id="node47" href="$NiftiArmNode_8h.html" title="NiftiArmNode.h" alt="" coords="3424,83,3536,112"/>
+<area shape="rect" id="node13" href="$nifti__arm__status_8cpp.html" title="nifti_arm_status.cpp" alt="" coords="679,160,817,189"/>
+<area shape="rect" id="node49" href="$NiftiArmNode_8cpp.html" title="NiftiArmNode.cpp" alt="" coords="3467,160,3592,189"/>
+<area shape="rect" id="node51" href="$motorcontroller_8h.html" title="motorcontroller.h" alt="" coords="3371,237,3488,267"/>
+<area shape="rect" id="node54" href="$callbacks_8h.html" title="callbacks.h" alt="" coords="3512,237,3600,267"/>
+</map>
