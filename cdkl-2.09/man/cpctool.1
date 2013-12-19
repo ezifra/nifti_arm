@@ -1,0 +1,51 @@
+.\" '\" t
+.\" ** The above line should force tbl to be a preprocessor **
+.\" Man page for cpctool - demonstration tool for the CPC-Library API and CPC interfaces
+.\" 
+.\" Copyright (C) 2000-2005 EMS Dr. Thomas Wuensche
+.TH "CPCTOOL" "1" "2.07" "EMS Dr. Thomas Wuensche" "CDKL"
+.SH "NAME"
+cpctool \- demonstration tool for using CPC library API and CPC interfaces
+.SH "SYNOPSIS"
+cpctool [\-v] \-[\-h] \-bBAUDRATE [\-iINTERFACE]
+.SH "DESCRIPTION"
+cpctool
+is a tool to send and receive CAN message over CAN PC interfaces of EMS Dr. Thomas Wuensche.
+.TP 
+\-bBAUDRATE
+baudrate to use, e.g. 500, 125, 20
+.TP 
+\-iINTERFACE
+interface to use, e.g. CHAN01, /dev/usb/cpc_usb0
+.TP 
+\-h
+print usage information
+.TP 
+\-v
+print version information
+.TP 
+.TP 
+If no interface is specified the default interface is used (CHAN00), please look in your appropriate INI section in cpcconf.ini
+.SH "EXAMPLES"
+.TP 
+Open channel CHAN02 with baudrate 500.
+.TP 
+cpctool \-b500 \-iCHAN02
+.TP 
+Open device /dev/usb/cpc_usb0 with baudraute 500.
+.TP 
+cpctool \-b500 \-i/dev/usb/cpc_usb0
+
+.SH "AUTHORS"
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+<br
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+
+.SH "COMPANY"
+cpctool is a product of EMS Dr. Thomas Wuensche
+.br 
+(http://www.ems\-wuensche.com)
+.LP 
+Copyright (c) 2000\-2006 EMS Dr. Thomas Wuensche 

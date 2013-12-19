@@ -1,0 +1,92 @@
+.TH "CPC_SendMsg" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_SendMsg\fR \- Send a standard CAN message
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int \fBCPC_SendMsg\fR(int \fIhandle\fP, unsigned char \fIconfirm\fP, CPC_CAN_MSG_T * \fIcanmsg\fR)
+.SH "PARAMETERS"
+.LP 
+\fIhandle\fR \- handle obtained by \fBCPC_OpenChannel\fR
+.LP 
+\fIconfirm\fR \- A flag indicating if the execution should be confirmed 
+.br 
+   (not yet implemented)
+.LP 
+\fIcanmsg\fR \- A pointer to the message to be sent
+
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_SendMsg\fR is used to send a standard CAN message given by \fIcanmsg\fR on the channel, represented by \fIhandle\fR. The parameter \fIconfirm\fR is not implemented yet.
+.SH "EXAMPLE"
+CPC_CAN_MSG_T canmsg;
+.br
+.LP 
+canmsg.id = 0x7e5;
+.br
+canmsg.length = 4;
+.br
+canmsg.msg[0] = 0xAA;
+.br
+canmsg.msg[1] = 0x55;
+.br
+canmsg.msg[2] = 0xAA;
+.br
+canmsg.msg[3] = 0x55;
+.br
+.LP 
+if(CPC_SendMsg(handle, 0, &canmsg) != 0) {
+.br
+	// error handling here
+.br
+}
+.br
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a value equal to 0 is returned if the message has been sent.
+.IP error:
+.br 
+a value < 0 is returned, please refer to section \fBSEE ALSO\fR
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_CANInit(3) CPC_SendXMsg(3) CPC_SendRTR(3) CPC_SendXRTR(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

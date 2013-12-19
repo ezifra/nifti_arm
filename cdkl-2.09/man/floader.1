@@ -1,0 +1,52 @@
+.\" '\" t
+.\" ** The above line should force tbl to be a preprocessor **
+.\" Man page for floader - Firmware update tool for CPC-USB
+.\" 
+.\" Copyright (C) 1998-2001,2002,2003 EMS Dr. Thomas Wuensche
+.TH "FLOADER" "1" "FLOADER" "EMS Dr. Thomas Wuensche" "CPCLIB"
+.SH "NAME"
+floader \- firmware update tool for CPC\-USB
+.SH "SYNOPSIS"
+.B floader [OPTION]
+.SH "DESCRIPTION"
+.B floader
+is a tool to update the CPC\-USB firmware. CPC\-USB is the USB to CAN interface of EMS Dr. Thomas Wuensche.
+.TP 
+.B \-f,
+binary file which is downloaded
+.TP 
+.B \-b,
+must be set if a file containing the bootloader is specified
+.TP 
+.B \-l,
+a log file is created during the download process
+
+.TP 
+There must not be a space between \-f and the filename.
+.P
+If the filesize does not match the size for either a application firmware or
+a firmaware containing application and bootloader the download will not be performed.
+.P
+If the download process is stopped while the application is loaded, the device can still
+reboot to the bootloader. 
+.P
+If the download process is stopped while a bootloader is loaded, the device may not boot
+again and the manufactorer may be contacted.
+
+.SH "EXAMPLES"
+.TP 
+Download of a new application firmware.
+.P
+floader \-fapp0_35.bin
+
+Download of a new firmware containing bootloader and application
+.P
+floader \-fa0_35+b1_10.bin \-b
+
+.SH "AUTHOR"
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+
+.SH "COMPANY"
+floader is a product of EMS Dr. Thomas Wuensche (http://www.ems\-wuensche.com).
+
+Copyright (c) 1998\-2001,2002,2003 EMS Dr. Thomas Wuensche.

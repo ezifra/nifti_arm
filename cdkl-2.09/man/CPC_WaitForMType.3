@@ -1,0 +1,85 @@
+.TH "CPC_WaitForMType" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_WaitForMType\fR \- Wait for a specified message
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+CPC_MSG_T * \fBCPC_WaitForMType\fR(int \fIhandle\fP, int \fImtype\fP)
+.SH "PARAMETERS"
+.LP 
+.LP 
+\fIhandle\fR  \- handle obtained by \fBCPC_OpenChannel\fR
+.LP 
+\fImtype\fR \- the message type which should be waited for
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_WaitForMType\fR listens on the specified channel for the given message type.
+.LP 
+\fBNOTE:\fR All other messages are discarded if no handlers are hooked !!
+.SH "DATA_TYPES"
+mtype \- message types which can be waited for
+.TS
+tab (@);
+l l l
+l l l.
+define@value@description
+CPC_MSG_T_INFO@18@// information string
+CPC_MSG_T_CAN@1@// CAN data frame
+CPC_MSG_T_XCAN@16@// XCAN data frame
+CPC_MSG_T_RTR@8@// CAN remote frame
+CPC_MSG_T_XRTR@17@// XCAN remote frame
+CPC_MSG_T_CAN_PRMS@12@// Actually used CAN parameters
+CPC_MSG_T_CANSTATE@14@// CAN state message
+CPC_MSG_T_DISCONNECTED@24@// response type for a disconnected interface
+.TE
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+\fBCPC_MSG_T\fR \- A pointer to the message we have been waiting for.
+.IP error:
+.br 
+\fBNULL\fR \- An error or timeout occoured
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_AddHandler(3) CPC_AddHandlerEx(3) CPC_Handle(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche.
+.br 
+(http://www.ems\-wuensche.com)
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2006 EMS Dr. Thomas Wuensche
+
+

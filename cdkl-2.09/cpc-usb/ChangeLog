@@ -1,0 +1,42 @@
+Revision  Date        Author               Description
+0.502     15.06.2004  Sebastian Haas       Rewrite and port of cpc-usb from 2.4 to 2.6
+0.512     16.06.2004  Sebastian Haas       Clean up
+0.513	  08.07.2004  Markus Plessing      Fixed Bug in device file permissions
+0.515     22.07.2004  Sebastian Haas       Fixed bug on release call
+0.520     17.08.2004  Sebastian Haas       Added missing spin_lock_irq... calls
+0.527     19.08.2004  Sebastian Haas       Added missing down/up calls
+                                           Fixed bug in read_bulk_callback
+                                           that causes the system to hang
+                      G. Uttenthaler       CAN Init paramete conversion routine reviewed. Support
+                                           now also acc_code and acc_mask registers
+0.601     20.08.2004  Sebastian Haas       Improved throughput
+0.706     15.09.2004  Sebastian Haas       If module is unload while a process has opened
+										   the device we are block rmmod until the process
+										   closed the device
+0.707     16.09.2004  Sebastian Haas       Bugfix in cpcusb_delete: Card was freed before channel
+0.709     20.09.2004  Sebastian Haas       Added support for ProcFS used by cpcconf.ini
+                                           Bugfix: cpcusb_disconnect - card was delete and then used
+0.710     23.09.2004  Sebastian Haas       Bugfix: cpcusb_disconnect wakeup process after "channel is opened"-check
+0.711     01.02.2005  Sebastian Haas       Replaced sleep_on with wait_event
+                                           Added missed size and verify_area check in read/write funcs
+0.712     02.02.2005  Sebastian Haas       Replaced verify_area with access_ok
+                                           Check return value of copy_*_user
+                                           Make compile without errors/warnings under FC3 2.6.10
+                                           Use usb_kill_urb instead of usb_unlink_urb
+0.713     21.03.2005  Sebastian Haas       Used bugfixed SJA2M16C function from Ch. Schoett
+0.714     23.03.2005  Sebastian Haas       Added controller type check
+0.715     13.04.2005  Sebastian Haas       Don't use usb_epnum_to_epdesc cause
+                                           it's deprecated since 2.6.11
+0.716     12.05.2005  Sebastian Haas       Catch buffer commands (CNT, CLEAR)
+0.717     29.09.2005  Sebastian Haas       Support for the new CPC-USB/LPC2119
+0.718     03.11.2005  Sebastian Haas       Fixed missing mode field as of Linux Kernel 2.6.14
+0.719     17.11.2005  Sebastian Haas       Use product ID to differ between new and old CPC-USB
+0.720     11.01.2006  Sebastian Haas       Prevent a completly full USB command buffer
+0.721     17.01.2006  Sebastian Haas       Removed "owner = THIS_MODULE" in struct usb_driver initializiation, no more available since 2.6.15-RC3
+0.722     11.05.2006  Sebastian Haas       Transmit Give CPC_CMD_T_CLEAR_MSG_QUEUE to the device
+0.723     24.03.2007  Sebastian Haas       Support kernel version >= 2.6.19
+0.724     13.01.2008  Sebastian Haas       Fixed deadlock on > 2.6.24
+0.725     17.11.2009  Daniel Trägner       Removed "owner" from proc_dir_entry structs, no more available since 2.6.30-RC3
+0.726     16.08.2011  Markus Plessing      Added different enhancements to support kernels up to 2.6.39
+                                           Replaces some semaphore with mutex-handling
+                                           Changed allocation of usb buffer space

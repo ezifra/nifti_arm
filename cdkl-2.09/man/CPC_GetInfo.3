@@ -1,0 +1,92 @@
+.TH "CPC_GetInfo" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_GetInfo\fR \- Get information of \fItype\fR from \fIsource\fR
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+char * \fBCPC_GetInfo\fR(int \fIhandle\fR, unsigned char \fIsource\fR, unsigned char \fItype\fR)
+.SH "PARAMETERS"
+.LP 
+\fIhandle\fP \- The handle returned from \fICPC_OpenChannel\fR
+.LP 
+\fIsource\fR \- The source the information should be requested from
+.LP 
+\fItype\fR \- The type of information which should be requested
+.SH "DESCRIPTION"
+\fBCPC_GetInfo\fR is used to retrieve e.g. interface information.
+.br 
+See section \fBDATA_TYPES\fR for information on the requestable sources and types.
+.br 
+.SH "DATA_TYPES"
+.LP 
+\fIsource\fR \- defines to be used for source
+.TS
+tab (@);
+l l l
+l l l.
+define@value@description
+CPC_INFOMSG_T_UNKNOWN_SOURCE@0@unknown source
+CPC_INFOMSG_T_INTERFACE@1@query information from interface
+CPC_INFOMSG_T_DRIVER@2@query information from driver
+CPC_INFOMSG_T_LIBRARY@3@query information from library
+.TE
+.LP 
+\fItypes\fR \- defines to be used for type
+.TS
+tab (@);
+l l l
+l l l.
+define@value@description
+CPC_INFOMSG_T_UNKNOWN_TYPE@0@unknown type
+CPC_INFOMSG_T_VERSION@1@query version information
+CPC_INFOMSG_T_SERIAL@2@query serial information
+.TE
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a char pointer pointing to the retrieved information message.
+.IP error:
+.br 
+a char pointer pointing to the appropriate error message.
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_CANInit(3) CPC_OpenChannel(3) CPC_RequestInfo(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

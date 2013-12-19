@@ -1,0 +1,55 @@
+Revision  Date        Author               Description
+0.902     20.07.1999  Gerhard Uttenthaler  Initial revision
+0.903     xx.xx.xxxx  Gerhard Uttenthaler  New CPC_INIT_PARAMS structure
+0.904     xx.xx.xxxx  Gerhard Uttenthaler  Some minor bugs fixed
+                                           CPC_INIT_PARAMS for more than one channel or card
+                                           Check if CAN-Controller is in init mode in function can_init()
+0.905     xx.xx.xxxx  Gerhard Uttenthaler  New structure of header files
+0.996     xx.xx.xxxx  Gerhard Uttenthaler  CPC_Get_DriverInfo implemented
+                                           CPC_Get_Version implemented
+0.997     xx.xx.xxxx  Gerhard Uttenthaler  Support for extended frame format implemented
+0.998     xx.xx.xxxx  Gerhard Uttenthaler  Support for kernel 2.2.x
+                                           Buffer allocated by vmalloc
+                                           Select checks if CAN controller TX buffer is accessible
+                                           No do{...}while() in interrupt routine
+0.999     xx.xx.xxxx  Gerhard Uttenthaler  Support for kernel 2.4.x
+                                           Poll bug fixed
+1.000     24.01.2002  Gerhard Uttenthaler  RTR length bug fixed
+1.100     16.04.2002  Gerhard Uttenthaler  Modified to fit unified user API
+1.001     08.05.2002  Gerhard Uttenthaler  Different path for cpc.h
+                                           cpclib.h instead of cpcdrv.h
+1.012     10.05.2002  Gerhard Uttenthaler  Low level function now in cpcpassive.h
+                                           error interrupt
+                                           overrun flag cleared
+1.013     13.05.2002  Gerhard Uttenthaler  vfree in cleanup_module
+                                           dev_id in irq handling
+1.114     15.11.2002  Gerhard Uttenthaler  clearbuf() implemented
+                                           getBufCnt() implemented
+                                           putCANParams() implemented
+                                           initCPCTables() added
+1.214     06.12.2002  Gerhard Uttenthaler  dynamic CPCTable allocation
+                                           Bugfix in interrupt handler.
+                                           recmsg->length = ... corrected
+1.314     xx.01.2003  Gerhard Uttenthaler  Changed CPCTable typedef changed a lot
+1.315     16.07.2003  Gerhard Uttenthaler  Changed CPCTable typedef changed a lot
+1.316     01.12.2003  Gerhard Uttenthaler  read_byte()/write_byte declared static
+1.402     17.06.2004  Sebastian Haas       Ported to linux kernel 2.6 and parport api
+                                           Replaced save_flags with spin_lock
+                                           Support for more devices
+                                           Cleanup
+1.403     18.06.2004  Sebastian Haas       Added procfs support
+1.404     30.06.2004  Sebastian Haas       Better interrupt handling (not perfect)
+1.406     30.07.2004  Sebastian Haas       Removed cpc-passive.c
+1.408     16.09.2004  Sebastian Haas       Use controller specific function from sja1000.h
+                                           Added DevFS support (UNTESTED)
+1.409     20.09.2004  Sebastian Haas       Added ProcFS support for cpcconf.ini
+                                           Removed old ProcFS entry "ems_wuensche/cpc_eco"
+1.410     01.02.2005  Sebastian Haas       Added missed verify_area and size check to read/write funcs
+1.410     01.02.2005  Sebastian Haas       Bugfix in ISR to prevent hanging IRQ
+                                           Added sysfs support
+1.411     11.06.2005  Sebastian Haas       Support for CPC class
+1.412     24.03.2007  Sebastian Haas       Support kernel version >= 2.6.19
+1.414     18.12.2008  Sebastian Haas       Changed license to GPL and cleaned code a bit
+1.500     10.02.2009  Sebastian Haas       Removed cpc-class dependency
+1.501     17.11.2009  Daniel Trägner       Removed "owner" from proc_dir_entry structs, no more available since 2.6.30-RC3
+1.502	  21.05.2010  Markus Plessing      Added missing include: linux/shed.h is no longer included with linux/poll.h

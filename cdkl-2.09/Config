@@ -1,0 +1,41 @@
+##########################
+# start user modified part
+
+# enable the interface for you want a driver to be compiled
+CPC_PCI_SUPPORTED=false
+CPC_CARD_SUPPORTED=false
+CPC_XT_SUPPORTED=true
+CPC_USB_SUPPORTED=true
+CPC_ECO_SUPPORTED=false
+
+# set the maximum count of CAN channels supported by the library
+CPC_CAN_MAX_DEVICE=10
+
+SOCKETCAN_SUPPORT=false
+SERIAL_SUPPORT=false
+
+# where your kernel sources are
+KERNELDIR  = /lib/modules/`uname -r`/build
+
+# the path where user application search for cpc.h and cpclib.h
+CPC_H_PATH = /usr/include/linux
+
+GCC    = gcc
+DEPMOD = /sbin/depmod
+
+MANPATH= /usr/share/man
+
+# UDEV - only relevant if you are using udev system
+# Path to your configuration directory for udev
+UDEV_CONF_PATH = /etc/udev
+
+# enable this if you don't use devfs nor udev
+CREATE_INODES=false
+
+CLIBFLAGS = -DCAN_MAX_DEVICE=$(CPC_CAN_MAX_DEVICE)
+
+OUTPUT_FILE = /dev/null
+
+# end user modified part
+##########################
+

@@ -1,0 +1,66 @@
+.TH "CPC_RemoveHandlerEx" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_RemoveHandlerEx\fR \- Remove a handler, including the additional data pointer, hooked up with a channel.
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int \fBCPC_RemoveHandlerEx\fR(int \fIhandle\fP, void (*\fIhandlerEx\fR)(int handle, const CPC_MSG_T*, void *customPointer))
+
+.SH "PARAMETERS"
+.LP 
+\fIhandle\fR \- handle obtained by \fBCPC_OpenChannel\fR
+.LP 
+\fIhandler\fP \- The pointer to the handler function which has to be released.
+
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_RemoveHandlerEx\fR is used to remove a handler with an additional data pointer from the handler list.
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a value equal to 0 is returned if the handler has been removed.
+.IP error:
+.br 
+a value < 0 is returned. Please refer to section \fBSEE ALSO\fR.
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_Handle(3) CPC_AddHandler(3) CPC_AddHandlerEx(3) CPC_RemoveHandler(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Pless>ing <plessing@ems\-wuensche.com
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

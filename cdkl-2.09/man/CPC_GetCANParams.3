@@ -1,0 +1,58 @@
+.TH "CPC_CANInit" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_GetCANParams\fR \- get the CAN parameters currently set.
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+CPC_CAN_PARAMS_T * \fBCPC_GetCANParams\fR(int \fIhandle\fP)
+.SH "PARAMETERS"
+.LP 
+.TP 
+\fIhandle\fP \- The handle returned by \fBCPC_OpenChannel\fR
+
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_GetCANParams\fR is not implemented yet.
+.SH "RETURN VALUE"
+.LP 
+a pointer to the retrieved CPC_CAN_PARAMS_T structure.
+
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_CANInit(3) CPC_OpenChannel(3) CPC_RequestCANParams(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche (http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

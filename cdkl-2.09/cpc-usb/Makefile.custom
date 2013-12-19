@@ -1,0 +1,23 @@
+include $(PWD)/Config
+
+all: driver
+
+driver:
+	make -C $(KERNELDIR) SUBDIRS=$(PWD)/cpc-usb modules
+
+inodes:
+	for i in 0 1 2 3; do\
+		if \
+			mknod -m 666 /dev/usb/cpc_usb$$i c 180 $$i; then   \
+			echo "/dev/usb/cpc_usb$$i created"; \
+		fi \
+	done;
+												
+
+install:
+	install -d -o root -g root -m 644 /lib/modules/`uname -r`/misc; \
+	install -o root -g root -m 644 cpc-usb.ko /lib/modules/`uname -r`/misc;
+	
+clean:
+	 make -C $(KERNELDIR) SUBDIRS=$(PWD)/cpc-usb clean
+	 rm -f .cpc-*.cmd *.ko *.o 

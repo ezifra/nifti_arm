@@ -1,0 +1,23 @@
+File        Revision  Date        Author               Description
+sja1000.h   1.002     02.09.2004  Sebastian Haas       Added version information
+pca82c200.h 1.001     02.09.2004  Sebastian Haas       Added version information
+sja1000.h   1.003     09.09.2004  Sebastian Haas       Added definitions for CMR, PeliCAN Mode
+													   Enabled BusError IRQ
+pca82c200.h 1.002     14.09.2004  Sebastian Haas       Added ISR
+sja1000.h   1.004     14.09.2004  Sebastian Haas       Bugifx in ISR
+pca82c200.h 1.003     15.09.2004  Sebastian Haas       Added missing RRB in ISR
+													   Added missing wake_up in ISR
+													   Added missing store in ISR
+sja1000.h   1.005     02.02.2005  Sebastian Haas       Count IRQs, Sent/Received
+sja1000.h   1.006     04.02.2005  Sebastian Haas       Bugfix: Check interrupt source and controller mode
+                                                       sja1000_reset: Disables IRQ, BTR, OUTP_CONTR and sets RESET Mode
+pca82c200.h 1.004     04.02.2005  Sebastian Haas       Bugfix: Check interrupt source and controller mode
+                                                       pca82c200_reset: Disables IRQ, BTR, OUTP_CONTR and sets RESET Mode
+sja1000.h   1.007     10.02.2005  Sebastian Haas       Added CPC_Control support (CAN-State, CAN-Message)
+pca82c200.h 1.005     14.02.2005  Sebastian Haas       Added CPC_Control support (CAN-State, CAN-Message)
+sja1000.h   1.008     21.03.2005  Sebastian Haas       Support new cpc.h, read RxErr, TxErr
+sja1000.h   1.009     12.05.2005  Sebastian Haas       Added overrun mechanism
+pca82c200.h 1.006     12.05.2005  Sebastian Haas       Added overrun mechanism
+                                                       Count sent/received/lost messages
+sja1000.h   1.010     06.08.2009  Daniel Trägner       Update timestamp of user requested messages
+pca82c200.h 1.007     06.08.2009  Daniel Trägner       Update timestamp of user requested messages

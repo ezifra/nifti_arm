@@ -1,0 +1,15 @@
+Revision  Date        Author               Description
+0.900     01.04.2005  Sebastian Haas       Started
+0.901     04.04.2005  Sebastian Haas       Don't mappe address space, use isa_readb instead
+                                           (address space already mapped by linux)
+                                           Retrieve IRQ from CPCLIB
+0.902     12.05.2005  Sebastian Haas       Added better support for PCA82C200 (untested)
+                                           Use cpc_process_command()
+1.000     11.06.2005  Sebastian Haas       Support for CPC class
+1.001     18.08.2005  Sebastian Haas       Fixed missing devt element on Linux < 2.6.12
+1.100     07.08.2006  Sebastian Haas       Introduced support for CPC-104mc
+1.101     24.03.2007  Sebastian Haas       Support kernel version >= 2.6.19
+1.102     06.02.2008  Sebastian Haas       Support kernel version >= 2.6.24 (IRQF_SHARED replaced SA_SHIRQ)
+1.200     10.02.2009  Sebastian Haas       Removed cpc-class dependency
+1.201     17.11.2009  Daniel Trägner       Removed "owner" from proc_dir_entry structs, no more available since 2.6.30-RC3
+1.202	  21.05.2010  Markus Plessing	   Added missing include file linux/shed.h which is not included in linux/poll.h anymore

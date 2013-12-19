@@ -1,0 +1,53 @@
+For using CPC-Card you need the following:
+
+- make sure you have installed the driver before continue, see README in root directory of CDKL
+
+- make also sure your PCMCIA subsystem (CardManager) is installed and working properly. 
+
+  NOTE:
+  If you are using an more up to date Linux distribution e.g. Fedora Core 4, SuSE 10.0, you
+  don't need to install the PCMCIA CardManager software, cause it is handled by the kernels
+  sysfs/hotplug interface. The driver modules are also automatically loaded by the kernel.
+
+- you have to edit the PCMCIA configuration file in /etc/pcmcia/config.opts
+
+- Add the following lines:
+
+# EMS Dr. Thomas Wuensche CPC-Card CAN Interface
+device "cpc-card_cs"
+  card "EMS Dr. Thomas Wuensche CPC-Card CAN Interface"
+  version "EMS_T_W", "CPC-Card", "*", "*"
+  bind "cpc-card_cs"
+
+- to load the driver, type "modprobe cpc-card_cs"
+
+- restart the PCMCIA services
+  SuSE:
+  	rcpcmcia restart
+  Debian:
+  	/etc/init.d/pcmcia restart
+
+- disconnect and reconnect CPC-CARD
+  
+  - you should hear 2 sounds
+  - depending on your distribution you should see the device files 
+    /dev/cpc_card0 and /dev/cpc_card1
+
+- for testing you can use the "cpctool" demo application
+  "cpctool -b<MyBaudrate> -i/dev/cpc_card0"
+
+- if something goes wrong, look into /var/log/messages. There must be some 
+  debugging messages
+
+- on a desktop PC with a plug-in cardbus adapter (Ricoh host controller) it was needed to
+  set "PCMCIA_PCIC_OPTS=irq_mode=0" (Using Yast (Yast1) with a SuSE distribution).
+  
+--------------------------------------------
+EMS Dr. Thomas Wuensche
+Sonnenhang 3
+85304 Ilmmuenster
+Tel.:  +49-8441-490260
+Fax:   +49-8441-81860
+email: support@ems-wuensche.com
+www:   www.ems-wuensche.com
+--------------------------------------------

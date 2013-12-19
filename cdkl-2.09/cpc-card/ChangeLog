@@ -1,0 +1,68 @@
+Revision  Date        Author               Description
+0.902     14.02.00    G. Uttenthaler       Initial revision
+0.903     xx.xx.xx    G. Uttenthaler       New CPC_INIT_PARAMS structure
+0.904     xx.xx.xx    G. Uttenthaler       Some minor bugs fixed
+                                           CPC_INIT_PARAMS for more than one minor or card
+                                           Check if CAN-Controller is in init mode in function can_init();
+0.905     xx.xx.xx    G. Uttenthaler       New structure of header files
+0.906     xx.xx.xx    G. Uttenthaler       CPC_Get_DriverInfo implemented
+                                           CPC_Get_Version implemented
+0.907     xx.xx.xxxx  G. Uttenthaler       Transceiver BusOff in CPCCardOpen
+0.908     xx.xx.xxxx  G. Uttenthaler       Can be compiled for Kernel 2.0.x or Kernel 2.2.x via #ifdef
+0.909     xx.xx.xxxx  G. Uttenthaler       Bugfix: init_module only accepts cpc-card 
+                                           CPCCardRelease disables interrupt only when both channels are closed
+0.919     11.12.2001  G. Uttenthaler       Changes for kernel 2.4.x
+0.920     24.02.2002  G. Uttenthaler       Some more CAN functions implemented
+                                           RTR length bug fixed
+                                           Overrun byte corrected
+                                           busOff when device closes
+0.930     13.05.2002  G. Uttenthaler       Changes for new API
+0.931     15.11.2002  G. Uttenthaler       clearbuf() implemented
+                                           getBufCnt() implemented
+                                           putCANParams() implemented
+                                           inits() added
+1.000     06.12.2002  G. Uttenthaler       Dynamic CPCTable allocation
+1.100     19.01.2003  G. Uttenthaler       Changed CPCTable typedef changed a lot
+                                           Bugfix in interrupt handler
+                                           recmsg->length = ... corrected
+1.202     28.07.2004  Sebastian Haas       Support for 2.6 Linux kernel (2.4 no longer supported)
+                                           Proper detection of card/controllers and channels
+                                           Cleanup
+1.204     29.07.2004  Sebastian Haas       Proper disconnect handling
+                                           Fixed "bug" in interrupt routine
+1.301     30.07.2004  Sebastian Haas       Support for PCA82C200
+                                           Cleanup and remove cpc-passive.c
+1.304     14.09.2004  Sebastian Haas       Use CPC_CHAN_T insted of CPCStruct_T
+                                           Use controller specific ISR
+0.931     15.09.2004  Sebastian Haas       cpc-card_cs: fixed  unload mechanism
+1.306     15.09.2004  Sebastian Haas       If module is unload while a process has opened
+										   the device we are block rmmod until the process
+										   closed the device
+1.308     16.09.2004  Sebastian Haas       Added DevFS support
+1.309     20.09.2004  Sebastian Haas       Added ProcFS support for cpcconf.ini
+1.310     01.02.2005  Sebastian Haas       Replaced sleep_on with wait_event
+                                           Bugfix: possible missed RRB on highload in ISR
+1.311     03.02.2005  Sebastian Haas       Support udev via class_simple
+                                           Replaced verify_area with access_okay
+                                           Fixed warning (readb/writeb)
+                                           Check return value of copy_*_user
+                                           Bugfix: Try to read signature (0xAA55) to
+                                                   detect spurios IRQs
+                                           Bugfix: Channel detection
+1.312     04.02.2005  Sebastian Haas       Bugfix: fault if both channels are opened and card is unplugged
+1.313     14.02.2005  Sebastian Haas       Added CPC_Control support
+                                           Support for converting SJA1000 params to PCA82C200 params
+1.315b    18.03.2005  Sebastian Haas       Corrected some print output format
+                                           Due to changes in include/cpc_int.h this driver need to be tested
+                                           Use cpc_process_command() (untested)
+1.316     11.06.2005  Sebastian Haas       Support for CPC class
+1.317     08.08.2005  Sebastian Haas       Removed CardService version check as it is no longer needed
+1.318     17.10.2005  Sebastian Haas       Updated README file
+1.319     03.11.2005  Sebastian Haas       Added support for ID table
+                                           Fixed missing requesite callback after Linux Kernel 2.6.12
+1.320     26.04.2006  Sebastian Haas       Compiles now for Linux Kernel 2.6.16
+1.321     21.12.2006  Sebastian Haas       Some major kernel version support fixes, added basic 64Bit support
+1.322     26.04.2007  Sebastian Haas       Some major kernel version support, works now on 2.6.20
+1.323     18.12.2008  Sebastian Haas       Changed license to GPL and cleaned code a bit
+1.324     17.11.2009  Daniel Trägner       Removed "owner" from proc_dir_entry structs, no more available since 2.6.30-RC3
+

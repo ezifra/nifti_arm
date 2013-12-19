@@ -1,0 +1,22 @@
+include $(PWD)/Config
+
+all: driver
+
+driver:
+	make -C $(KERNELDIR) SUBDIRS=$(PWD)/cpc-eco modules
+
+inodes:
+	for i in 0 1; do\
+		if \
+			mknod -m 666 /dev/cpc_eco$$i c 122 $$i; then   \
+			echo "/dev/cpc_eco$$i created"; \
+		fi \
+	done;
+												
+
+install:
+	install -d -o root -g root -m 644 /lib/modules/`uname -r`/misc; \
+	install -o root -g root -m 644 cpc-eco.ko /lib/modules/`uname -r`/misc/cpc-eco.ko;
+
+clean:
+	 make -C $(KERNELDIR) SUBDIRS=$(PWD)/cpc-eco clean

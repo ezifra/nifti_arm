@@ -1,0 +1,4 @@
+# This file establishes permissions and ownership of CPC-USB devices according
+# to Ubuntu policy.  See udev(7) for syntax.
+
+KERNEL=="cpc_usb[0-9]*",		GROUP="plugdev"

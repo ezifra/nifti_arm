@@ -1,0 +1,86 @@
+Revision  Date        Author               Description
+0.900     29.07.1999  G. Uttenthaler       Started
+0.901     07.05.2001  G. Uttenthaler       Bugfix: while read of CAN controller
+                                           bit 4 always has been 0
+0.911     27.05.2001  G. Uttenthaler       Support of dual channel CPC-PCI
+                                           Proc entry
+0.912     13.06.2001  G. Uttenthaler       udelay() replaced by mdelay()
+                                           error log, if no CPC-PCI card is found
+                                           file operation prototypes corrected
+0.922     10.08.2001  G. Uttenthaler       Compiled for kernel 2.4.x
+                                           Timestamp added
+0.932     05.11.2001  G. Uttenthaler       Kernel 2.0.x no longer supported
+                                           wake_up_interruptible in interrupt handler
+                                           Select bug fixed
+0.942     15.01.2002  G. Uttenthaler       overrun bit corrected
+                                           CAN error interrupt handling implemented
+0.943     24.02.2002  G. Uttenthaler       RTR length bug fixed
+0.944     29.02.2002  G. Uttenthaler       putDriverVersion changed
+0.945     06.02.2002  G. Uttenthaler       Extended canstate msg
+0.950     10.05.2002  G. Uttenthaler       Changes for new API
+                                           Low level function now in cpcpassive.h
+0.952     15.11.2002  G. Uttenthaler       clearbuf() implemented
+                                           getBufCnt() implemented
+                                           putCANParams() implemented
+                                           initCPCTables() added
+1.000     25.11.2002  G. Uttenthaler       Support of more than one CPC-PCI
+1.001     06.12.2002  G. Uttenthaler       SA_SHIRQ instead of SA_INTERRUPT
+                                           Interrupts are enabled at driver init
+1.002     12.12.2002  G. Uttenthaler       Detects now single channel cards
+1.003     21.12.2002  G. Uttenthaler       Changed CPCTable typedef changed a lot
+                                           Bugfix in interrupt handler.
+                                           recmsg->length = ... corrected
+1.004     01.07.2003  G. Uttenthaler       cli()/sti() changed to 
+                                           spin_lock_irqsave()/spin_unlock_irqrestore()
+                                           error interrupt extended
+1.005     01.09.2003  G. Uttenthaler       error interrupt changed
+1.015     15.04.2004  Sebastian Haas       Ported to linux kernel 2.6 (2.2 and 2.4 no longer
+                                           supported by this driver)
+1.016     17.06.2004  Sebastian Haas       clearbuf and getBufCnt replaced with cpcpassive "lib"
+                                           Read/Write uses cpcpassive "lib"
+1.017     18.06.2004  Sebastian Haas       Cleanup, use file->private_data
+1.021     30.06.2004  Haas/Schoett         Bugfix PITA multiplex
+                                           proper channel detection
+                                           better memory handling
+                                           proper irq handling
+1.022     30.07.2004  Sebastian Haas       Removed special cpc-passive.c (Cleanup)
+1.024     06.08.2004  Sebastian Haas       Fixed bug in channel memory allocation
+1.026     02.09.2004  Sebastian Haas       Cleanup in IRQ service routine
+                                           Additional IRQ enabled TransmitInterrupt, ErrorInterrupt
+                                           Check interrupt register on top of IRQ service routine
+                                           Additional IRQ security checks
+                                           Display ised SJA1000 driver version (sja1000.h)
+1.027     14.09.2004  Sebastian Haas       Fixed bug in irq handling
+1.028     15.09.2004  Sebastian Haas       If module is unload while a process has opened
+                                           the device we are block rmmod until the process
+                                           closed the device
+1.029     16.09.2004  Sebastian Haas       Added DevFS support
+1.030     17.09.2004  Sebastian Haas       Added ProcFS support for cpcconf.ini
+1.031     23.09.2004  Sebastian Haas       Added support for EEPROM operations to get serial and productname
+                                           Bugfix in cpcpassive.h: Changed value of buffer slot before check
+                                           if it is free
+1.032     01.02.2005  Sebastian Haas       Replaced sleep_on with wait_event
+                                           Removed some compiler warnings on using io funcs (e.g. writel, readl)
+                                           Added missed size and verify_area check in read/write funcs
+                                           Added try_again bugfix
+1.033     02.02.2005  Sebastian Haas       Replaced verify_area with access_ok
+                                           Check return value of copy_*_user
+                                           Added Debug support /proc/drivers/cpc-pci/debug
+                                           can_reset() only reset the given channel not the hole card
+1.034     03.02.2005  Sebastian Haas       Added udev support via class_simple
+1.035     11.02.2005  Sebastian Haas       Added CPC_Control Support (CAN-State, CAN-Message)
+1.036     18.03.2005  Sebastian Haas       Improvement: Make 64Bit compatible
+1.037     23.03.2005  Sebastian Haas       Added controller type check
+1.038     12.05.2005  Sebastian Haas       Sourced command processing out into cpcpassive.h
+1.039     11.06.2005  Sebastian Haas       Support new CPC-Interface class
+                                           Bugfix: if first device found isn't an EMS CAN interface CPCPciCnt and
+                                           card_idx become negative and all following device will not be probed
+1.040     24.03.2007  Sebastian Haas       Support kernel version >= 2.6.19
+1.041	  20.07.2007  Markus Plessing      Extended determine product for PCIe
+1.042	  06.02.2008  Sebastian Haas       Support kernel version >= 2.6.22 (IRQF_SHARED, pci_driver_register)
+1.100	  03.06.2008  Sebastian Haas       Added support for CPC-PCI v2
+1.200	  10.02.2009  Sebastian Haas       Removed cpc-class dependencies
+1.201     17.11.2009  Daniel Trägner       Removed "owner" from proc_dir_entry structs, no more available since 2.6.30-RC3
+1.202	  21.05.2010  Markus Plessing      Added missing include file 
+					   linux/shed.h is not included with linux/poll.h anymore 
+					   and fixed some minor pointer comparision warnings

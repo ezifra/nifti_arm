@@ -1,0 +1,81 @@
+.TH "CPC_RequestCANState" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_RequestCANState\fR \- Request the CAN state information from the controller
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int \fBCPC_RequestCANState\fR(int \fIhandle\fP, unsigned char \fIconfirm\fP)
+.SH "PARAMETERS"
+.LP 
+.TP 
+\fIhandle\fP \- handle obtained by \fBCPC_OpenChannel\fR
+.TP 
+\fIconfirm\fP \- A flag indicating if the execution should be confirmed 
+.br 
+   (not yet implemented)
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_RequestCANState\fR is used to request the state of the CAN controller. The requested information is store in the message queue and can be retrieve by calling \fBCPC_Handle\fR. The message type of the stored message is \fBCPC_MSG_T_CANSTATE\fR. See section \fBDATA_TYPES\fR how to interpret the values of the response. To get CAN state immediately, use \fBCPC_GetCANState\fR.
+.SH "DATA_TYPES"
+State values returned with the requested CAN State message
+.LP 
+.TS
+tab (@);
+l l l
+l l l.
+define@value@description
+CPC_CAN_STATE_BUSOFF@0x80@Bus is in an offline state
+CPC_CAN_STATE_ERROR@0x40@Bus is in an error state
+CPC_CAN_STATE_MASK@0xc0@Mask to ignore undefined bits
+.TE
+.LP 
+\fBNOTE:\fR Ignore any bits not listed above. Use the given mask to ignore these bits.
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a value equal to 0 is returned if the request message has been sent.
+.IP error:
+.br 
+a value < 0 is returned, please refer to section \fBSEE ALSO\fR
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_CANInit(3) CPC_OpenChannel(3) CPC_GetCANState(3) 
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

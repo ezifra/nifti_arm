@@ -1,0 +1,67 @@
+.TH "CPC_CANExit" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_CANExit\fR \- Release the CAN controller
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int \fBCPC_CANExit\fR(int \fIhandle\fP, unsigned char \fIconfirm\fP)
+.SH "PARAMETERS"
+.LP 
+.TP 
+\fIhandle\fP \- the handle returned by \fBCPC_OpenChannel\fR
+.TP 
+\fIconfirm\fP \- A flag indicating if the execution should be confirmed 
+.br 
+   (not yet implemented)
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_CANExit\fR sets the the CAN controller in a mode in which the controller is prohibited from bus activity.
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a value equal to 0 is returned if the exit message has been submitted.
+.IP error:
+.br 
+a value < 0 is returned, please refer a \fBSEE ALSO\fR
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_CANInit(3) CPC_SendMsg(3) CPC_CloseChannel(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

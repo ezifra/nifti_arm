@@ -1,0 +1,62 @@
+.TH "CPC_Handle" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_Handle\fR \- Execute all handlers in the list for the given channel 
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+CPC_MSG_T * \fBCPC_Handle\fR(int \fIhandle\fP)
+.SH "PARAMETERS"
+.LP 
+\fIhandle\fR \- handle obtained by \fBCPC_OpenChannel\fR
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_Handle\fR is used to retrieve a CPC message from the message queue. All handlers hooked up with the given channel are executed.
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a CPC_MSG_T pointer to the received message
+.IP error:
+.br 
+NULL pointer if no messages are available
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_AddHandler(3) CPC_AddHandlerEx(3) CPC_RemoveHandler(3) CPC_RemoveHandlerEx(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

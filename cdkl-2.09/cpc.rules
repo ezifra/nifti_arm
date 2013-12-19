@@ -1,0 +1,26 @@
+# Move /dev/cpc_usb* to /dev/usb/cpc_usb*
+KERNEL=="cpc_usb*", NAME="usb/cpc_usb%n", MODE="0666"
+
+# /dev/cpc_eco*
+KERNEL=="cpc_eco*", NAME="cpc_eco%n", MODE="0666"
+KERNEL=="cpc-eco"
+
+# /dev/cpc_xt*
+KERNEL=="cpc_xt*", NAME="cpc_xt%n", MODE="0666"
+KERNEL=="cpc-xt"
+
+# /dev/cpc_xti*
+KERNEL=="cpc_xti*", NAME="cpc_xti%n", MODE="0666"
+KERNEL=="cpc-xti"
+
+# /dev/cpc_pp*
+KERNEL=="cpc_pp*", NAME="cpc_pp%n", MODE="0666"
+KERNEL=="cpc-pp"
+
+# /dev/cpc_pci*
+KERNEL=="cpc_pci*", NAME="cpc_pci%n", MODE="0666"
+KERNEL=="cpc-pci"
+
+# /dev/cpc_card*
+KERNEL=="cpc_card*", NAME="cpc_card%n", MODE="0666"
+KERNEL=="cpc-card"

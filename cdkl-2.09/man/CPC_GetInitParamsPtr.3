@@ -1,0 +1,107 @@
+.TH "CPC_GetInitParamsPtr" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_GetInitParamsPtr\fR \- Get initialization pointer
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+CPC_INIT_PARAMS_T * \fBCPC_GetInitParamsPtr\fR(int \fIhandle\fP)
+.SH "PARAMETERS"
+.LP 
+.TP 
+\fIhandle\fP \- handle obtained by \fBCPC_OpenChannel\fR
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_GetInitParamsPtr\fR provides access to the intialization structure, which is contained in the shared library.
+.SH "RETURN VALUE"
+.LP 
+A pointer to the initialization structure in the shared library.
+.SH "EXAMPLE"
+.LP 
+/* first, get a pointer to CPCINIT_PARAMS_T */
+.br 
+CPC_INIT_PARAMS_T *pInitParams = CPC_GetInitParamsPtr(handle);
+.LP 
+/* set the controller type */
+.br 
+pInitParams\->canparams.cc_type = SJA1000;
+.LP 
+/* now setup baudrate, acceptance filtering, ... */
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_code0 = 0x55;
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_code1 = 0x55;
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_code2 = 0x55;
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_code3 = 0x55;
+.LP 
+pInitParams\->canparams.cc_params.sja1000.acc_mask0 = 0xff;
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_mask1 = 0xff;
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_mask2 = 0xff;
+.br 
+pInitParams\->canparams.cc_params.sja1000.acc_mask3 = 0xff;
+.LP 
+pInitParams\->canparams.cc_params.sja1000.btr0      = 0x00;
+.br 
+pInitParams\->canparams.cc_params.sja1000.btr1      = 0x1c;
+.LP 
+pInitParams\->canparams.cc_params.sja1000.outp_contr= 0xda;
+.br 
+.TP 
+Recommended bit timings by CiA (CAN in Automation Group)
+1MBaud: btr0: 0x00 btr1:0x14
+.br 
+500KB:  btr0: 0x00 btr1:0x1c
+.br 
+250KB:  btr0: 0x01 btr1:0x1c
+.br 
+125KB:  btr0: 0x03 btr1:0x1c
+.br 
+100KB:  btr0: 0x04 btr1:0x1c
+.br 
+50KB:   btr0: 0x09 btr1:0x1c
+.br 
+20KB:   btr0: 0x18 btr1:0x1c
+.br 
+10KB:   btr0: 0x31 btr1:0x1c
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_CANInit(3) CPC_OpenChannel(3) CPC_RequestCANParams(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

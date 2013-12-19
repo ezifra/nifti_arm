@@ -1,0 +1,60 @@
+.TH "CPC_CloseChannel" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_CloseChannel\fR \- Close a CAN Channel
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int \fBCPC_CloseChannel\fR(int \fIhandle\fP)
+.SH "PARAMETERS"
+.LP 
+.TP 
+\fIhandle\fP \- handle obtained by \fBCPC_OpenChannel\fR
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_CloseChannel\fR instructs the driver to close the channel specified by the parameter \fIhandle\fR. \fBCPC_CloseChannel\fR has always to be used paired with \fBCPC_OpenChannel\fR.
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+0
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_OpenChannel(3) CPC_GetInitParamsPtr(3) CPC_CANInit(3) CPC_CANExit(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche

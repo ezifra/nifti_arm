@@ -1,0 +1,206 @@
+.TH "CPC-Library" "3" "Release 2.39" "Sebastian Haas" "cpclib"
+.SH "NAME"
+.LP 
+\fBCPCLIB\fR \- Introduction to CPC\-Library
+.SH "OVERVIEW"
+.LP 
+CPC\-Libary is used to communicate with CPC\-Interface series from EMS Dr. Thomas Wuensche.
+.LP 
+To get started see \fBCPC_OpenChannel(3)\fR.
+.SH "EXAMPLE"
+.LP 
+Below is a minimum code requirement to open a channel with 250KBit/s baudrate, sending a standard CAN Message and close the opened channel.
+.LP 
+#include <stdio.h>
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int main(int argc, char *argv[])
+.br 
+{
+.br 
+	int handle;
+.br 
+	int result;
+.br 
+	CPC_CAN_MSG_T msg = {0x123, 3, {0x00, 0x01, 0x02}};
+.br 
+	CPC_INIT_PARAMS_T *pInitParams;
+.br 
+.LP 
+	/* Open channel CHAN00, defined in /etc/cpcconf.ini */
+.br 
+	handle = CPC_OpenChannel("CHAN00");
+.br 
+	if(handle < 0) {
+.br
+		printf("CPC_OpenChannel failed: %d\\n", handle);
+.br
+		return 1;
+.br
+	}
+.LP 
+	pInitParams = CPC_GetInitParamsPtr(handle);
+.LP 
+	/* set the controller type */
+.br 
+	pInitParams\->canparams.cc_type = SJA1000;
+.LP 
+	/* now setup baudrate, acceptance filtering, ... */
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_code0 = 0x55;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_code1 = 0x55;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_code2 = 0x55;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_code3 = 0x55;
+.LP 
+	pInitParams\->canparams.cc_params.sja1000.acc_mask0 = 0xff;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_mask1 = 0xff;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_mask2 = 0xff;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.acc_mask3 = 0xff;
+.LP 
+	pInitParams\->canparams.cc_params.sja1000.btr0      = 0x00;
+.br 
+	pInitParams\->canparams.cc_params.sja1000.btr1      = 0x1c;
+.LP 
+	pInitParams\->canparams.cc_params.sja1000.outp_contr= 0xda;
+.LP 
+	CPC_CANInit(handle, 0);
+.LP 
+	result = CPC_SendMsg(handle, 0, &msg);
+.br 
+	printf("sending result: %d\\n", result);
+.br 
+	CPC_CloseChannel(handle);
+.LP 
+	return 0;
+.br 
+}
+.SH "COMPILING"
+.LP 
+To compile use the command:
+.LP 
+cc helloworld.c \-lcpc \-o helloworld
+.SH "NOTES"
+.LP 
+Make sure the header files and the library file (libcpc.so or libcpc.a) are placed in your search paths. For cpc.h this is usually /usr/include/linux, respective /usr/include for cpclib.h. The libraries should be placed in /usr/lib.
+.SH "DATA TYPES"
+The structure \fBCPC_MSG\fR is used as a container for different types of messages from the driver to the 
+application. Typically a handler function will check the type of a received message and perform a specific action on it.
+
+typedef struct CPC_MSG { 
+.TS
+tab (@);
+l l.
+  unsigned char type;@// the type of message, which is in the msg field
+  unsigned char length;@// the byte count of data, which is in the msg field
+  unsigned char msgid;@// an number used for a confirmed action
+  unsigned long ts_sec;@// time stamp seconds
+  unsigned long ts_nsec;@// time stamp nanoseconds
+  union {@// the msg field, where different types of data is transported
+    unsigned char generic[CPC_MSG_LEN]; @// generic type, raw data
+    CPC_CAN_MSG_T  canmsg;@// CAN message (11 or 29 bit identifier)
+    CPC_CAN_PARAMS_T  canparams;@// CAN controller initialisation data
+    CPC_CONFIRM_T confirmation;@// used for a confirmed action
+    CPC_INFO_T info;@// used for different types of information 
+    CPC_OVERRUN_T overrun;@// used for handling overrun condition
+    unsigned char busload;@// busload message (0\-255<\->0\-100%)
+    unsigned char canstate;@// CAN controller status register
+  } msg; 
+} CPC_MSG_T;
+.TE
+
+
+.SH "ERROR CODES"
+.LP 
+Channel open error codes:
+.IP \fBCPC_ERR_NO_FREE_CHANNEL\fR
+No more free space within the channel array.
+.IP \fBCPC_ERR_CHANNEL_ALREADY_OPEN\fR
+The channel is already open.
+.IP \fBCPC_ERR_CHANNEL_NOT_ACTIVE\fR
+Access to a channel not active failed.
+.IP \fBCPC_ERR_NO_DRIVER_PRESENT\fR
+No driver at the location searched by the library.
+.IP \fBCPC_ERR_NO_INIFILE_PRESENT\fR
+The library could not find the inifile.
+.IP \fBCPC_ERR_WRONG_PARAMETERS\fR
+Wrong parameters in the inifile.
+.IP \fBCPC_ERR_NO_INTERFACE_PRESENT\fR
+1. The specified interface is not connected
+.br 
+2. The interface (mostly CPC\-USB) was disconnected upon operation
+
+.IP \fBCPC_ERR_NO_MATCHING_CHANNEL\fR
+The driver could not find a matching channel.
+.IP \fBCPC_ERR_NO_BUFFER_AVAILABLE\fR
+The driver could not allocate buffer for messages.
+.IP \fBCPC_ERR_NO_INTERRUPT\fR
+The requested interrupt could not be claimed.
+.IP \fBCPC_ERR_NO_MATCHING_INTERFACE\fR
+No interface type related to this channel was found.
+.IP \fBCPC_ERR_NO_RESOURCES\fR
+The requested resources could not be claimed.
+.IP \fBCPC_ERR_SOCKET\fR
+Error concerning TCP sockets.
+
+.LP 
+Init error codes
+.IP \fBCPC_ERR_WRONG_CONTROLLER_TYPE\fR
+Wrong CAN controller type within initialization.
+.IP \fBCPC_ERR_NO_RESET_MODE\fR
+The controller could not be set into reset mode.
+.IP \fBCPC_ERR_NO_CAN_ACCESS\fR
+The CAN controller could not be accessed.
+
+.LP 
+Transmit error codes
+.IP \fBCPC_ERR_CAN_WRONG_ID\fR
+The provided CAN id is too big.
+.IP \fBCPC_ERR_CAN_WRONG_LENGTH\fR
+The provided CAN length is too long.
+.IP \fBCPC_ERR_CAN_NO_TRANSMIT_BUF\fR
+The transmit buffer was occupied.
+.IP \fBCPC_ERR_CAN_TRANSMIT_TIMEOUT\fR
+The message could not be sent within a specified time.
+
+.LP 
+Other error codes
+.IP \fBCPC_ERR_SERVICE_NOT_SUPPORTED\fR
+The requested service is not supported by the interface.
+.IP \fBCPC_ERR_IO_TRANSFER\fR
+A transmission error down to the driver occurred.
+.IP \fBCPC_ERR_TRANSMISSION_FAILED\fR
+A transmission error down to the interface occurred.
+.IP \fBCPC_ERR_TRANSMISSION_TIMEOUT\fR
+A timeout occurred within transmission to the interface.
+.IP \fBCPC_ERR_OP_SYS_NOT_SUPPORTED\fR
+The operating system is not supported.
+.IP \fBCPC_ERR_UNKNOWN\fR
+An unknown error ocurred (mostly IOCTL errors).
+.IP \fBCPC_ERR_LOADING_DLL\fR
+The library 'cpcwin.dll' could not be loaded.
+.IP \fBCPC_ERR_ASSIGNING_FUNCTION\fR
+The specified function could not be assigned.
+.IP \fBCPC_ERR_DLL_INITIALIZATION\fR
+The DLL was not initialized correctly.
+.IP \fBCPC_ERR_MISSING_LICFILE\fR
+The file containing the licenses does not exist.
+.IP \fBCPC_ERR_MISSING_LICENSE\fR
+A required license was not found.
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.br 
+Markus Plessing <plessing@ems\-wuensche.com>
+.SH "SEE ALSO"
+.LP 
+CPC_OpenChannel(3) CPC_CloseChannel(3) CPC_CANInit(3) CPC_CANExit(3) CPC_GetInitParamsPtr(3) CPC_SendMsg(3) CPC_SendXMsg(3) CPC_SendRTR(3) CPC_SendXRTR(3) CPC_GetInfo(3) CPC_RequestInfo(3) CPC_Handle(3) CPC_AddHandler(3) CPC_AddHandlerEx(3) CPC_RemoveHandler(3) CPC_RemoveHandlerEx(3) CPC_Control(3) CPC_ClearMSGQueue(3) CPC_GetMSGQueueCnt(3) CPC_ClearCMDQueue(3) CPC_GetCANState(3) CPC_WaitForMType(3) CPC_RequestCANParams(3) CPC_RequestCANState(3) CPC_GetCANParams(3)

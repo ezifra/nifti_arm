@@ -1,0 +1,14 @@
+generate_cpcconf.py:
+	This python script generates output in the format of the cpcconf.ini file. Before you start
+	make sure all drivers you need are loaded and all devices that should be recognized are
+	pluged-in.
+	
+	Example call:
+	python generate_cpcconf.py > cpcconf.ini
+
+	This starts the script any save its output to a file called cpcconf.ini. To use this file
+	for CPCLIB copy the file to /etc/cpcconf.ini (as root).
+
+	CPC-XT:
+	If you use an CPC-XT this script did not set the right IrqNr, this has to be done manually
+	in the appropriate channel section in the cpcconf.ini file.

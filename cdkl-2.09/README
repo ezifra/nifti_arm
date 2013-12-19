@@ -1,0 +1,58 @@
+--------------------------------------------
+Thank you for purchasing our CAN products!
+--------------------------------------------
+
+1. Configuring
+	edit "Config" to enable your CPC interface
+	and configure the path to your kernel-sources
+	or header files (e.g. /lib/modules/2.6.9/build)
+
+2. Installing the driver:
+
+-> on top level type:
+	make clean install
+
+	This will compile and install the configured
+	drivers. To load the driver, type:
+		insmod <DRIVER_DIR>/<DRIVER_NAME>.ko
+		or
+		modprobe <DRIVER_NAME>
+
+-> for using cpcconf.ini
+	look in tools/README for further information
+
+-> if your distribution don't support udev, do
+	make inodes 
+   to create all needed device files
+
+3. Making the demo application:
+
+-> on top level type:
+	make demo
+
+4. To install the manual page for the library
+
+-> on top level type:
+	make doc
+
+NOTE: For CPC-Card users
+Please look into the README file in the cpc-card directory
+
+NOTE: CPC-Class
+The CPC-Class is not used by any driver, except the CPC-Card,
+to register a device file for every new detected channel.
+Due to the fact, that the CPC-Card cannot be offered any more,
+the CPC-Class has been removed from the source code tree.
+
+--------------------------------------------
+any questions or suggestions to:
+
+EMS Dr. Thomas Wuensche
+Sonnenhang 3
+85304 Ilmmuenster
+Tel.:  +49-8441-490260
+Fax:   +49-8441-81860
+email: support@ems-wuensche.com
+www:   www.ems-wuensche.com
+--------------------------------------------
+

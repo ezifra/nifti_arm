@@ -1,0 +1,64 @@
+.TH "CPC_CANInit" "3" "Release 2.39" "EMS Dr. Thomas Wuensche" "CPC Interface Library"
+.SH "NAME"
+.LP 
+\fBCPC_CANInit\fR \- Initialize CAN controller
+.SH "SYNTAX"
+.LP 
+#include <linux/cpc.h>
+.br 
+#include <cpclib.h>
+.LP 
+int \fBCPC_CANInit\fR(int \fIhandle\fP, unsigned char \fIconfirm\fP)
+.SH "PARAMETERS"
+.LP 
+\fIhandle\fR \- A handle to the appropriate channel obtained by CPC_OpenChannel(3).
+.LP 
+\fIconfirm\fR \- A flag indicating if the execution should be confirmed 
+.br  
+   (not yet implemented)
+.SH "DESCRIPTION"
+.LP 
+\fBCPC_CANInit\fR initializes the parameters of the CAN controller within the CPC Interfaces. The CAN controller is set up with parameters supplied by the internal CAN parameters structure, see \fBCPC_GetInitParamsPtr(3)\fR.
+.SH "RETURN VALUE"
+.LP 
+.IP success:
+.br 
+a valid handle to the requested CAN channel. This handle is used in all subsequent function calls.
+.IP error:
+.br 
+a value < 0 is returned, please refer a \fBSEE ALSO\fR
+.SH "SEE ALSO"
+.LP 
+cpclib(3) CPC_GetInitParamsPtr(3) CPC_SendMsg(3) CPC_CloseChannel(3) CPC_CANExit(3)
+.SH "AUTHORS"
+Sebastian Haas <haas@ems\-wuensche.com>
+.br 
+Gerhard Uttenthaler <uttenthaler@ems\-wuensche.com>
+.SH "NOTES"
+CPCLIB is a product of EMS Dr. Thomas Wuensche 
+.br 
+(http://www.ems\-wuensche.com).
+
+.IP Support:
+.br 
+EMS Dr. Thomas Wuensche
+.br 
+Sonnenhang 3
+.br 
+.br 
+D\-85304 Illmuenster
+.br 
+.br 
+Tel. +49\-8441\-490260
+.br 
+Fax  +49\-8441\-81860
+.br 
+.IP WARNING:
+.br 
+EMS hardware and software may not be used in applications where damage to life, health or private property may result from failures in or caused by these components.
+.br 
+.IP Copyright:
+.br 
+No part of this document or the software described herein may be reproduced in any from without prior written agreement from EMS Dr. Thomas Wuensche.
+.br 
+Copyright (c) 1998\-2005 EMS Dr. Thomas Wuensche
