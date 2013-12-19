@@ -38,10 +38,13 @@ You can get the sources by cloning the repository above:
 The package *nifti_arm* and its dependencies is build with cmake. You can find a tutorial for using cmake here [http://www.youtube.com/watch?v=CLvZTyji_Uw](http://www.youtube.com/watch?v=CLvZTyji_Uw).
 
 To build the *nifti_arm* sources, make sure you have the *nifti_arm* package directory and its dependencies set correctly in your ROS_PACKAGE_PATH environment variable.
-Change into the checked out directory *nifti_arm*. Within each of the subdirectories (*libcan, libcpc, tulibs, libepos*) execute the following commands:  
+Change into the checked out directory *nifti_arm*. Within each of the subdirectories (*remake, libcan, libcpc, tulibs, libepos, cpc-usb, cdkl-2.09*) execute the following commands:  
 
-*cmake .*  
+*mkdir build*  
+*cd build*  
+*cmake ../*  
 *make*  
+*sudo make install*
   
 After that you can build the nifti_arm:  
 *rosmake nifti_arm*    
