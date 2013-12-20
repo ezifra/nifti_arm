@@ -56,7 +56,7 @@ If you have the arm installed on your robot you can find in the *launch* directo
 3. Usage
 --------
 
-A description of how to install the arm on the robot can be found here [https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/User%20Manual%20for%20the%20NIFTi-Arm%20v0.2.docx](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/User%20Manual%20for%20the%20NIFTi-Arm%20v0.2.docx)
+A description of how to install the arm on the robot can be found here [https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/User%20Manual%20for%20the%20NIFTi-Arm%20v0.2.pdf](https://github.com/NIFTi-Fraunhofer/nifti_arm/blob/master/doc/User%20Manual%20for%20the%20NIFTi-Arm%20v0.2.pdf)
 
 To launch the *nifti_arm_demo_gui* just execute:  
 *roslaunch nifti_arm_demo_gui demo_gui.launch*
