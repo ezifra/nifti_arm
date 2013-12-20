@@ -14,7 +14,7 @@ To support an easy replacement of sensors the PTU has 3 active USB 2.0 port avai
 <img src="https://raw.github.com/NIFTi-Fraunhofer/nifti_arm/master/doc/NIFTi_robot_with_arm.jpg" alt="NIFTi-Robot-with-Arm" width="45%"/>
 </div>
 
-2. Installation
+2. Installation 2
 ---------------
 
 This software is based on ROS Fuerte [http://wiki.ros.org/fuerte](http://wiki.ros.org/fuerte).
